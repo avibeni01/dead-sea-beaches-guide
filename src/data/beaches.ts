@@ -7,11 +7,9 @@ export const beaches: Beach[] = [
     hebrewName: "עין בוקק",
     description: "Ein Bokek est l'une des plages les plus populaires de la Mer Morte, connue pour ses infrastructures de qualité et son accessibilité. Cette plage publique gratuite est idéale pour les familles et offre une expérience de baignade sécurisée dans les eaux thérapeutiques de la Mer Morte.",
     images: [
-      "https://images.pexels.com/photos/15577357/pexels-photo-15577357/free-photo-of-aerial-view-of-dead-sea-coastline.jpeg",
-      "https://images.pexels.com/photos/15577358/pexels-photo-15577358/free-photo-of-people-enjoying-dead-sea-mud-treatments.jpeg",
-      "https://images.pexels.com/photos/10249151/pexels-photo-10249151.jpeg",
-      "https://images.pexels.com/photos/19254497/pexels-photo-19254497/free-photo-of-plage-sable-eau-sans-personne.jpeg",
-      "https://images.pexels.com/photos/4388168/pexels-photo-4388168.jpeg"
+      "https://lp-cms-production.imgix.net/2019-06/fb1e752e3718884abf0bf661805cb064-ein-bokek-beach.jpg",
+      "https://q-xx.bstatic.com/xdata/images/city/608x352/654793.webp?k=741e9d678cfed288d8b9404d4856c74c3a3d33fd0727277797dfe1ba885aea3c&o=",
+      "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/292000/292384-Ein-Bokek.jpg"
     ],
     location: {
       latitude: 31.2039,
@@ -51,11 +49,9 @@ export const beaches: Beach[] = [
     hebrewName: "חוף מינרל",
     description: "Mineral Beach offre une expérience unique avec ses bains de boue naturelle et ses sources d'eau chaude. Cette plage est particulièrement appréciée pour ses propriétés thérapeutiques et son atmosphère relaxante.",
     images: [
-      "https://images.pexels.com/photos/16645500/pexels-photo-16645500/free-photo-of-mer-morte-israël.jpeg",
-      "https://images.pexels.com/photos/9026824/pexels-photo-9026824.jpeg",
-      "https://images.pexels.com/photos/9028658/pexels-photo-9028658.jpeg",
-      "https://images.pexels.com/photos/15638710/pexels-photo-15638710/free-photo-of-israel-ein-gedi-waterfall.jpeg",
-      "https://images.pexels.com/photos/15638702/pexels-photo-15638702/free-photo-of-ein-gedi-nature-reserve.jpeg"
+      "https://ynet-pic1.yit.co.il/picserver5/crop_images/2023/05/18/rkRtqxVrh/rkRtqxVrh_9_0_1264_711_0_x-large.jpg",
+      "https://media-cdn.tripadvisor.com/media/photo-s/01/53/34/f8/dead-sea.jpg",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/3e/09/30/caption.jpg?w=1200&h=-1&s=1"
     ],
     location: {
       latitude: 31.5677,
@@ -94,9 +90,9 @@ export const beaches: Beach[] = [
     hebrewName: "נווה מדבר",
     description: "Neve Midbar est une plage privée offrant une atmosphère paisible et des installations de qualité. Elle est réputée pour son spa et ses traitements à base de boue de la Mer Morte.",
     images: [
-      "https://images.pexels.com/photos/19254497/pexels-photo-19254497/free-photo-of-plage-sable-eau-sans-personne.jpeg",
-      "https://images.pexels.com/photos/16645501/pexels-photo-16645501/free-photo-of-mer-morte-israël.jpeg",
-      "https://images.pexels.com/photos/9028660/pexels-photo-9028660.jpeg"
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/e7/eb/aa/neve-midbar-upper-area.jpg?w=1200&h=-1&s=1",
+      "https://media-cdn.tripadvisor.com/media/photo-s/0e/fe/ef/26/20170415-124740-largejpg.jpg",
+      "https://www.deadsea.co.il/wp-content/uploads/2020/10/05b671a7-200f-4098-8d55-ca10710002b7.jpg"
     ],
     location: {
       latitude: 31.7123,
@@ -136,9 +132,9 @@ export const beaches: Beach[] = [
     hebrewName: "חוף קליה",
     description: "Située à l'extrémité nord de la Mer Morte, Kalia Beach est l'une des plages les plus proches de Jérusalem. Elle offre une expérience complète avec des installations modernes et un accès facile aux eaux thérapeutiques.",
     images: [
-      "https://images.pexels.com/photos/4017278/pexels-photo-4017278.jpeg",
-      "https://images.pexels.com/photos/4388168/pexels-photo-4388168.jpeg",
-      "https://images.pexels.com/photos/4388280/pexels-photo-4388280.jpeg"
+      "https://deadsea.com/wp-content/uploads/2016/05/-e1622978902351.jpg",
+      "https://www.worldbeachguide.com/photos/kalia-beach-dead-sea.jpg",
+      "https://www.deadsea.co.il/wp-content/uploads/2020/08/248-1.jpg"
     ],
     location: {
       latitude: 31.7696,
@@ -177,9 +173,9 @@ export const beaches: Beach[] = [
     hebrewName: "עין גדי",
     description: "Située près de la réserve naturelle d'Ein Gedi, cette plage combine l'expérience de la Mer Morte avec la proximité de magnifiques sentiers de randonnée et de cascades. C'est un lieu idéal pour combiner détente et exploration.",
     images: [
-      "https://images.pexels.com/photos/9432683/pexels-photo-9432683.jpeg",
-      "https://images.pexels.com/photos/15638710/pexels-photo-15638710/free-photo-of-israel-ein-gedi-waterfall.jpeg",
-      "https://images.pexels.com/photos/15638702/pexels-photo-15638702/free-photo-of-ein-gedi-nature-reserve.jpeg"
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/2c/f0/dd.jpg",
+      "https://www.immanuel-tours.com/wp-content/uploads/2017/11/shutterstock_401157517-e1511289289301.jpg",
+      "https://images.squarespace-cdn.com/content/v1/596b2969d2b85786e6892853/1557222362425-RLM2N1JDBZKL8IME3D6D/6D2A6687.jpg"
     ],
     location: {
       latitude: 31.4504,
@@ -217,10 +213,10 @@ export const beaches: Beach[] = [
     hebrewName: "חוף ביאנקיני",
     description: "Biankini est une plage moderne proposant une ambiance plus jeune et festive. Elle offre des installations de qualité et organise régulièrement des événements, ce qui en fait un lieu apprécié des jeunes voyageurs.",
     images: [
-      "https://images.pexels.com/photos/5757639/pexels-photo-5757639.jpeg",
-      "https://images.pexels.com/photos/4350296/pexels-photo-4350296.jpeg",
-      "https://images.pexels.com/photos/6157055/pexels-photo-6157055.jpeg"
-    ],
+      "https://deadsea.com/wp-content/uploads/2016/05/195gk1.jpg", 
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/96/a3/af/totes-meer-kalia-beach.jpg?h=500&s=1&w=900",
+      "https://thumbs.dreamstime.com/b/vacationers-mineral-mud-dead-sea-biankini-beach-israel-september-tourists-september-biankini-45244120.jpg"
+    ],    
     location: {
       latitude: 31.3329,
       longitude: 35.4101,
@@ -260,9 +256,9 @@ export const beaches: Beach[] = [
     hebrewName: "חוף הרודס",
     description: "Associée à l'hôtel Herods, cette plage privée offre un service haut de gamme et des installations luxueuses. Elle est particulièrement appréciée pour son calme et son confort.",
     images: [
-      "https://images.pexels.com/photos/4126724/pexels-photo-4126724.jpeg",
-      "https://images.pexels.com/photos/4126709/pexels-photo-4126709.jpeg",
-      "https://images.pexels.com/photos/6131179/pexels-photo-6131179.jpeg"
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/28/87/87/herods-dead-sea-hotel.jpg?h=500&s=1&w=900",
+        "https://www.americaisraeltours.com/wp-content/uploads/2024/09/6-herods-dead-sea-hotel.jpg",
+        "https://imgs.sanatoriums.com/w750h500q45cm/sanatorium/344/139162.jpg"
     ],
     location: {
       latitude: 31.1978,
@@ -304,9 +300,10 @@ export const beaches: Beach[] = [
     hebrewName: "חמי זוהר",
     description: "Hamei Zohar est une plage publique offrant une expérience authentique de la Mer Morte. Elle est moins touristique que certaines autres plages et appréciée pour son ambiance locale.",
     images: [
-      "https://images.pexels.com/photos/4217023/pexels-photo-4217023.jpeg",
-      "https://images.pexels.com/photos/1506991/pexels-photo-1506991.jpeg",
-      "https://images.pexels.com/photos/4217021/pexels-photo-4217021.jpeg"
+      "https://deadsea.com/wp-content/uploads/2016/05/shutterstock_543680401-min-768x512.jpg",
+      "https://img2.oastatic.com/img2/45483938/max/variant.jpg",
+      "https://www.deadsea.co.il/wp-content/uploads/2020/07/WhatsApp_Image_2022-09-21_at_12.54.571.jpeg",
+      "https://zisi.co.il/wp-content/uploads/2019/08/shutterstock_1052596403.jpg"
     ],
     location: {
       latitude: 31.1601,
@@ -344,9 +341,9 @@ export const beaches: Beach[] = [
     hebrewName: "נווה זוהר",
     description: "Située près du village de Neve Zohar, cette plage peu fréquentée offre une expérience plus calme et authentique. Idéale pour ceux qui cherchent à éviter les foules.",
     images: [
-      "https://images.pexels.com/photos/358283/pexels-photo-358283.jpeg",
-      "https://images.pexels.com/photos/8936845/pexels-photo-8936845.jpeg",
-      "https://images.pexels.com/photos/16645503/pexels-photo-16645503/free-photo-of-mer-morte-israël.jpeg"
+      "https://upload.wikimedia.org/wikipedia/commons/0/0d/NeveZohar_ST_06.jpg",
+      "https://sandee.com/_next/image?q=75&url=https%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNaWR839agow9-CpO1S9QJzQ_LAx7DPSbFQYWsE%3Ds1600-k-no&w=3840",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/20712143.jpg?hp=1&k=7b689c42d854d0b71cc0c52044ad30caa6d150ea5a0723352c0a2ed7cd510fc2&o="
     ],
     location: {
       latitude: 31.1692,
@@ -382,9 +379,9 @@ export const beaches: Beach[] = [
     hebrewName: "חוף ספא עין גדי",
     description: "Distincte de la plage publique d'Ein Gedi, cette plage privée est associée au spa Ein Gedi et offre des installations haut de gamme ainsi que des traitements spa complets utilisant les minéraux de la Mer Morte.",
     images: [
-      "https://images.pexels.com/photos/7412057/pexels-photo-7412057.jpeg",
-      "https://images.pexels.com/photos/7412069/pexels-photo-7412069.jpeg",
-      "https://images.pexels.com/photos/15492368/pexels-photo-15492368/free-photo-of-vue-aerienne-de-la-mer-morte.jpeg"
+      "https://www.deadsea.co.il/wp-content/uploads/2020/07/3-20.jpg",
+      "https://ngedi.co.il/wp-content/uploads/2019/05/spa02.jpg",
+      "https://images.openai.com/thumbnails/957b53456a3530c2660f748d82fb60b1.jpeg"
     ],
     location: {
       latitude: 31.4493,
@@ -428,11 +425,9 @@ export const religiousBeaches = [
     hebrewName: "חוף נפרד (עין בוקק)",
     description: "Cette section séparée de la plage d'Ein Bokek est spécialement conçue pour les visiteurs religieux, offrant des jours et horaires distincts pour les hommes et les femmes.",
     images: [
-      "https://images.pexels.com/photos/15736428/pexels-photo-15736428/free-photo-of-dead-sea-landscape.jpeg",
-      "https://images.pexels.com/photos/8936845/pexels-photo-8936845.jpeg",
-      "https://images.pexels.com/photos/16645503/pexels-photo-16645503/free-photo-of-mer-morte-israël.jpeg",
-      "https://images.pexels.com/photos/4388280/pexels-photo-4388280.jpeg",
-      "https://images.pexels.com/photos/4217023/pexels-photo-4217023.jpeg"
+        "https://www.deadsea.co.il/wp-content/uploads/2020/07/WhatsApp_Image_2022-09-21_at_12.54.57_11.jpeg",
+        "https://www.locate.co.il/Thumb/800/600/keepRatio/75/uploads/locations/1833127/492419_1571503462.jpg",
+        "https://www.now14.co.il/wp-content/uploads/2023/05/a8c73291-49b5-4d40-9f31-8fc189e8e69c.jpg"
     ],
     location: {
       latitude: 31.1978,
@@ -463,9 +458,9 @@ export const religiousBeaches = [
     hebrewName: "חוף נפרד (נווה מדבר)",
     description: "La plage séparée de Neve Midbar propose des installations spécifiquement conçues pour les visiteurs religieux, avec une stricte séparation entre hommes et femmes à des jours désignés.",
     images: [
-      "https://images.pexels.com/photos/10249151/pexels-photo-10249151.jpeg",
-      "https://images.pexels.com/photos/8936845/pexels-photo-8936845.jpeg",
-      "https://images.pexels.com/photos/358283/pexels-photo-358283.jpeg"
+        "https://www.tiuli.com/image/d829ff73b44ba62279db41a03f8a76ee.jpg?height=0&width=1080",
+        "https://www.deadsea.co.il/wp-content/uploads/2020/10/9b282377-58a4-4ea2-9f8c-5c3bf5cda1e5.jpg",
+        "https://www.dead-sea.org.il/media/2024/11/4087ab6186b4e8a093e770a2a2d0c142.jpg"
     ],
     location: {
       latitude: 31.7123,
@@ -497,10 +492,10 @@ export const religiousBeaches = [
     hebrewName: "חוף נפרד (קליה)",
     description: "La section séparée de la plage de Kalia offre une expérience respectueuse des traditions religieuses, avec des installations adaptées et un environnement préservant l'intimité.",
     images: [
-      "https://images.pexels.com/photos/4388168/pexels-photo-4388168.jpeg",
-      "https://images.pexels.com/photos/4388280/pexels-photo-4388280.jpeg",
-      "https://images.pexels.com/photos/358283/pexels-photo-358283.jpeg"
-    ],
+        "https://www.deadsea.co.il/wp-content/uploads/2020/07/WhatsApp_Image_2022-09-21_at_12.54.57_11.jpeg",
+        "https://www.locate.co.il/Thumb/800/600/keepRatio/75/uploads/locations/1833127/492419_1571503462.jpg",
+        "https://www.now14.co.il/wp-content/uploads/2023/05/a8c73291-49b5-4d40-9f31-8fc189e8e69c.jpg"
+    ],    
     location: {
       latitude: 31.7696,
       longitude: 35.4615,

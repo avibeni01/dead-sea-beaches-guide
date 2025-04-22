@@ -87,7 +87,7 @@ const TransportationSection: React.FC = () => {
               <ul className="text-gray-700 space-y-2">
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
-                  <p>Les transports publics en Israël ne fonctionnent pas pendant Shabbat (du vendredi soir au samedi soir).</p>
+                  <p>Les transports publics en Israël ne fonctionnent pas pendant Shabbat.</p>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
@@ -96,10 +96,6 @@ const TransportationSection: React.FC = () => {
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
                   <p>La location de voiture offre la plus grande flexibilité pour explorer plusieurs plages en une journée.</p>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-2">•</span>
-                  <p>Pour les groupes de 3 personnes ou plus, le taxi peut être économique par rapport aux billets de bus individuels.</p>
                 </li>
               </ul>
             </div>

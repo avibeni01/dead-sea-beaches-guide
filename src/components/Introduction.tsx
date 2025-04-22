@@ -33,13 +33,13 @@ const Introduction: React.FC = () => {
             </div>
             
             <div className="flex flex-col md:flex-row md:items-center md:space-x-6">
-              <div className="md:w-1/2 mb-4 md:mb-0">
+                <div className="md:w-1/2 mb-4 md:mb-0">
                 <img 
-                  src="https://images.pexels.com/photos/9741196/pexels-photo-9741196.jpeg" 
-                  alt="Vue panoramique de la Mer Morte" 
+                  src="https://images.pexels.com/photos/1194408/pexels-photo-1194408.jpeg" 
+                  alt="Man wearing sunglasses reading book on body of water" 
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
-              </div>
+                </div>
               <div className="md:w-1/2">
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Comment profiter au maximum de votre visite</h3>
                 <p className="text-gray-700">

@@ -6,7 +6,6 @@ import BeachesSection from './components/BeachesSection';
 import ReligiousBeachesSection from './components/ReligiousBeachesSection';
 import SafetySection from './components/SafetySection';
 import TransportationSection from './components/TransportationSection';
-import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
@@ -44,7 +43,6 @@ function App() {
       <ReligiousBeachesSection />
       <SafetySection />
       <TransportationSection />
-      <Footer />
     </div>
   );
 }
