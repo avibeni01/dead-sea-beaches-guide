@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply text-gray-800 font-sans;
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-down {
+  animation: fade-in-down 1s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
+}
+
+/* Custom color classes */
+.bg-primary {
+  @apply bg-orange-600;
+}
+
+.text-primary {
+  @apply text-orange-600;
+}
+
+.hover-primary:hover {
+  @apply bg-orange-700;
+}
+
+.border-primary {
+  @apply border-orange-600;
+}
+
+.bg-secondary {
+  @apply bg-pink-600;
+}
+
+.text-secondary {
+  @apply text-pink-600;
+}
+
+.hover-secondary:hover {
+  @apply bg-pink-700;
+}
+
+.border-secondary {
+  @apply border-pink-600;
+}
+
+.bg-accent {
+  @apply bg-fuchsia-600;
+}
+
+.text-accent {
+  @apply text-fuchsia-600;
+}
+
+.hover-accent:hover {
+  @apply bg-fuchsia-700;
+}
+
+.border-accent {
+  @apply border-fuchsia-600;
+}
