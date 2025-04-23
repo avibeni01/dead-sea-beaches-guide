@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative h-[40vh]">
+    <div className="relative h-[30vh] md:h-[50vh] max-h-[500px]">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center z-0" 
@@ -11,7 +11,6 @@ const Hero: React.FC = () => {
           backgroundBlendMode: 'overlay'
         }}
       >
-        {/* The color filter div has been removed */}
       </div>
       
       {/* Content */}

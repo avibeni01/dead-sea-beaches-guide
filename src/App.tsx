@@ -14,10 +14,10 @@ function App() {
     
     // Add smooth scrolling behavior
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', (e) => {
         e.preventDefault();
         
-        const target = document.querySelector(this.getAttribute('href') || '');
+        const target = document.querySelector(anchor.getAttribute('href') || '');
         if (target) {
           window.scrollTo({
             top: (target as HTMLElement).offsetTop - 80, // Adjust for header
