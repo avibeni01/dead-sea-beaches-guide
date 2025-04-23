@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Header from './components/Header';
+// import Header from './components/Header';
 import Hero from './components/Hero';
 import Introduction from './components/Introduction';
 import BeachesSection from './components/BeachesSection';
@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
+      {/* <Header /> */}
       <Hero />
       <Introduction />
       <BeachesSection />
