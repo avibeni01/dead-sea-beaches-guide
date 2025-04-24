@@ -1,12 +1,85 @@
 import React, { useState } from 'react';
-import { MapPin, Calendar, Scroll, Info, Check, Search } from 'lucide-react';
+import { MapPin, Calendar, Check, Search } from 'lucide-react';
 import { mediterraneanReligiousBeaches } from '../data/mediterraneanBeaches';
 
 const MediterraneanReligiousBeachesSection: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedBeach, setExpandedBeach] = useState<number | null>(null);
   
-  const filteredBeaches = mediterraneanReligiousBeaches.filter(beach => {
+  // Ajout de plages religieuses supplémentaires
+  const allReligiousBeaches = [
+    ...mediterraneanReligiousBeaches,
+    {
+      id: 106,
+      name: "Bat Yam Separate Beach",
+      hebrewName: "חוף נפרד בת ים",
+      description: "La plage séparée de Bat Yam offre un environnement familial et respectueux des traditions religieuses. Facilement accessible depuis Tel Aviv, elle propose des installations adaptées et un espace bien organisé pour les visiteurs observants.",
+      images: [
+        "https://images.pexels.com/photos/13590383/pexels-photo-13590383.jpeg",
+        "https://images.pexels.com/photos/5490378/pexels-photo-5490378.jpeg",
+        "https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg"
+      ],
+      location: {
+        city: "Bat Yam",
+        latitude: 32.0233,
+        longitude: 34.7361,
+        address: "Plage Nord, Bat Yam"
+      },
+      separationSchedule: {
+        men: "Dimanche, Mardi, Jeudi: 07:00-13:00 / Lundi, Mercredi: 14:00-19:00 / Vendredi: 07:00-12:00",
+        women: "Dimanche, Mardi, Jeudi: 14:00-19:00 / Lundi, Mercredi: 07:00-13:00 / Vendredi: 12:00-16:00",
+        notes: "Fermé pendant Shabbat. Horaires spéciaux pendant les fêtes."
+      },
+      specialFacilities: [
+        "Zones complètement séparées",
+        "Vestiaires familiaux",
+        "Douches séparées",
+        "Espaces ombragés",
+        "Aires de repos"
+      ],
+      specialRules: [
+        "Respect des horaires de séparation",
+        "Environnement familial",
+        "Zones dédiées pour enfants"
+      ]
+    },
+    {
+      id: 107,
+      name: "Hof HaMizrahi (Rishon LeZion)",
+      hebrewName: "חוף המזרחי ראשון לציון",
+      description: "Située à Rishon LeZion, cette plage séparée offre d'excellentes installations et une organisation exemplaire. Elle est particulièrement appréciée des familles religieuses qui recherchent un environnement adapté à leurs besoins.",
+      images: [
+        "https://images.pexels.com/photos/14576494/pexels-photo-14576494.jpeg",
+        "https://images.pexels.com/photos/15784303/pexels-photo-15784303/free-photo-of-mer-ciel-plage-vacances.jpeg",
+        "https://images.pexels.com/photos/15784306/pexels-photo-15784306/free-photo-of-cote-plage-paysage-eau.jpeg"
+      ],
+      location: {
+        city: "Rishon LeZion",
+        latitude: 31.9765,
+        longitude: 34.7898,
+        address: "Plage Est, Rishon LeZion"
+      },
+      separationSchedule: {
+        men: "Dimanche, Mardi, Jeudi: 07:30-14:00 / Lundi, Mercredi: 15:00-19:00 / Vendredi: 07:30-13:00",
+        women: "Dimanche, Mardi, Jeudi: 15:00-19:00 / Lundi, Mercredi: 07:30-14:00 / Vendredi: 13:00-16:00",
+        notes: "Fermé pendant Shabbat et jours fériés religieux."
+      },
+      specialFacilities: [
+        "Barrières complètes entre sections",
+        "Vestiaires adaptés",
+        "Zones ombragées",
+        "Aire de jeux pour enfants",
+        "Kiosque avec produits cachères"
+      ],
+      specialRules: [
+        "Horaires stricts à respecter",
+        "Zones familiales disponibles",
+        "Activités pour enfants organisées en été"
+      ]
+    }
+  ];
+  
+  const filteredBeaches = allReligiousBeaches.filter(beach => {
     return beach.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
            beach.location.city.toLowerCase().includes(searchTerm.toLowerCase()) ||
            beach.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -121,26 +194,8 @@ const MediterraneanReligiousBeachesSection: React.FC = () => {
                 {expandedBeach === beach.id && (
                   <div className="mt-4 pt-4 border-t border-gray-100 space-y-4">
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                        <Scroll className="w-4 h-4 mr-2 text-rose-500" />
-                        Code vestimentaire:
-                      </h4>
-                      <p className="text-sm text-gray-600">{beach.dressCode}</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                        <Info className="w-4 h-4 mr-2 text-rose-500" />
-                        Règles particulières:
-                      </h4>
-                      <ul className="text-sm text-gray-600 space-y-1">
-                        {beach.specialRules.map((rule: string, index: number) => (
-                          <li key={index} className="flex items-start">
-                            <span className="text-rose-500 mr-1">•</span>
-                            <span>{rule}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <h4 className="text-sm font-semibold text-gray-700 mb-2">Description:</h4>
+                      <p className="text-sm text-gray-600">{beach.description}</p>
                     </div>
                     
                     <div>
@@ -155,25 +210,20 @@ const MediterraneanReligiousBeachesSection: React.FC = () => {
                       </ul>
                     </div>
                     
-                    {/* Links */}
-                    <div className="grid grid-cols-2 gap-2 pt-2">
-                      <a 
-                        href={`https://www.google.com/maps/search/?api=1&query=${beach.location.latitude},${beach.location.longitude}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-center text-sm bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md transition-colors"
-                      >
-                        Google Maps
-                      </a>
-                      <a 
-                        href="https://elynortours.com/location-de-voiture/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-center text-sm bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-md transition-colors"
-                      >
-                        Louer un véhicule
-                      </a>
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-700 mb-2">Notes complémentaires:</h4>
+                      <p className="text-sm text-gray-600">{beach.separationSchedule.notes}</p>
                     </div>
+                    
+                    {/* Map Button */}
+                    <a 
+                      href={`https://www.google.com/maps/search/?api=1&query=${beach.location.latitude},${beach.location.longitude}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full bg-orange-500 text-white text-center py-2 rounded-md hover:bg-orange-600 transition-colors mt-4"
+                    >
+                      Voir sur Google Maps
+                    </a>
                   </div>
                 )}
               </div>
