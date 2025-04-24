@@ -78,51 +78,30 @@ function App() {
     };
   }, [showMediterranean]);
 
-  // App switcher component
-  const AppSwitcher = () => (
-    <div className="fixed bottom-4 right-4 z-50">
-      <div className="flex space-x-2">
-        <button
-          onClick={() => {
-            setShowMediterranean(true);
-            window.history.pushState({}, '', '#mediterranean-beaches');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className={`px-3 py-2 rounded-md text-sm font-medium shadow-md ${
-            showMediterranean 
-              ? 'bg-blue-600 text-white' 
-              : 'bg-white text-gray-800 hover:bg-gray-100'
-          }`}
-        >
-          Plages Méditerranée
-        </button>
-        <button
-          onClick={() => {
-            setShowMediterranean(false);
-            window.history.pushState({}, '', '#dead-sea-beaches');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className={`px-3 py-2 rounded-md text-sm font-medium shadow-md ${
-            !showMediterranean 
-              ? 'bg-orange-600 text-white' 
-              : 'bg-white text-gray-800 hover:bg-gray-100'
-          }`}
-        >
-          Plages Mer Morte
-        </button>
-      </div>
-    </div>
-  );
+  // Plus besoin du composant AppSwitcher séparé, puisque nous allons
+  // passer les états et fonctions directement aux composants Header
 
   return (
     <div className="min-h-screen bg-white">
       {showMediterranean ? (
-        // Mediterranean Beaches App
-        <MediterraneanApp />
+        // Mediterranean Beaches App avec props pour le switcher
+        <MediterraneanApp 
+          onSwitchApp={() => {
+            setShowMediterranean(false);
+            window.history.pushState({}, '', '#dead-sea-beaches');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+        />
       ) : (
-        // Dead Sea Beaches App
+        // Dead Sea Beaches App avec props pour le switcher
         <>
-          <Header />
+          <Header 
+            onSwitchApp={() => {
+              setShowMediterranean(true);
+              window.history.pushState({}, '', '#mediterranean-beaches');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
           <Hero />
           <Introduction />
           <div id="dead-sea-beaches">
@@ -133,8 +112,6 @@ function App() {
           <TransportationSection />
         </>
       )}
-      
-      <AppSwitcher />
     </div>
   );
 }

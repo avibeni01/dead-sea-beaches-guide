@@ -6,7 +6,11 @@ import MediterraneanBeachesSection from './components/MediterraneanBeachesSectio
 import MediterraneanSafetySection from './components/MediterraneanSafetySection';
 import MediterraneanTransportSection from './components/MediterraneanTransportSection';
 
-function MediterraneanApp() {
+interface MediterraneanAppProps {
+  onSwitchApp: () => void;
+}
+
+function MediterraneanApp({ onSwitchApp }: MediterraneanAppProps) {
   useEffect(() => {
     // Update page title
     document.title = "Les 20 Plus Belles Plages de la Méditerranée Israélienne - Guide Complet";
@@ -35,7 +39,7 @@ function MediterraneanApp() {
 
   return (
     <div className="min-h-screen bg-white">
-      <MediterraneanHeader />
+      <MediterraneanHeader onSwitchApp={onSwitchApp} />
       <MediterraneanHero />
       <MediterraneanIntroduction />
       <MediterraneanBeachesSection />
