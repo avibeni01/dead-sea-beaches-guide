@@ -15,9 +15,7 @@ const MediterraneanReligiousBeachesSection: React.FC = () => {
       hebrewName: "חוף נפרד בת ים",
       description: "La plage séparée de Bat Yam offre un environnement familial et respectueux des traditions religieuses. Facilement accessible depuis Tel Aviv, elle propose des installations adaptées et un espace bien organisé pour les visiteurs observants.",
       images: [
-        "https://images.pexels.com/photos/13590383/pexels-photo-13590383.jpeg",
-        "https://images.pexels.com/photos/5490378/pexels-photo-5490378.jpeg",
-        "https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg"
+        "https://studio-ma.co.il/wp-content/uploads/2019/05/SouthernPromenade_H-1390x626.jpg"
       ],
       location: {
         city: "Bat Yam",
@@ -49,9 +47,7 @@ const MediterraneanReligiousBeachesSection: React.FC = () => {
       hebrewName: "חוף המזרחי ראשון לציון",
       description: "Située à Rishon LeZion, cette plage séparée offre d'excellentes installations et une organisation exemplaire. Elle est particulièrement appréciée des familles religieuses qui recherchent un environnement adapté à leurs besoins.",
       images: [
-        "https://images.pexels.com/photos/14576494/pexels-photo-14576494.jpeg",
-        "https://images.pexels.com/photos/15784303/pexels-photo-15784303/free-photo-of-mer-ciel-plage-vacances.jpeg",
-        "https://images.pexels.com/photos/15784306/pexels-photo-15784306/free-photo-of-cote-plage-paysage-eau.jpeg"
+        "https://www.srugim.co.il/i/wp-content/uploads/2024/06/F220814MG08-scaled__w1200h350q80.jpg"
       ],
       location: {
         city: "Rishon LeZion",
