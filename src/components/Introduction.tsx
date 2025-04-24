@@ -2,7 +2,7 @@ import React from 'react';
 
 const Introduction: React.FC = () => {
   return (
-    <section id="introduction" className="py-20 bg-gradient-to-b from-teal-50 to-white">
+    <section id="introduction" className="py-20 bg-gradient-to-b from-orange-50 to-white">
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">
@@ -22,8 +22,8 @@ const Introduction: React.FC = () => {
               Ce guide vous présente les 10 plus belles plages de la Mer Morte, chacune avec ses spécificités et ses avantages. Que vous recherchiez un cadre luxueux, une expérience authentique ou des installations adaptées à vos besoins religieux, vous trouverez ici toutes les informations nécessaires pour planifier votre visite.
             </p>
             
-            <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 mb-6">
-              <h3 className="text-xl font-semibold text-blue-800 mb-3">Le saviez-vous?</h3>
+            <div className="bg-pink-50 p-6 rounded-lg border border-pink-100 mb-6">
+              <h3 className="text-xl font-semibold text-rose-800 mb-3">Le saviez-vous?</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>• La Mer Morte n'est pas une mer mais un lac hypersalin.</li>
                 <li>• Sa salinité est d'environ 34%, soit près de 10 fois celle des océans.</li>

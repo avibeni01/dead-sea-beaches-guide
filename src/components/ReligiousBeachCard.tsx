@@ -21,7 +21,7 @@ const ReligiousBeachCard: React.FC<ReligiousBeachCardProps> = ({ beach }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border-l-4 border-blue-600">
+    <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border-l-4 border-rose-600">
       {/* Image Carousel */}
       <div className="relative h-64">
         <img
@@ -54,7 +54,7 @@ const ReligiousBeachCard: React.FC<ReligiousBeachCardProps> = ({ beach }) => {
         </div>
         
         {/* Religious Beach Badge */}
-        <div className="absolute top-2 left-2 bg-blue-600 text-white px-3 py-1 rounded-md text-xs font-medium">
+        <div className="absolute top-2 left-2 bg-red-600 text-white px-3 py-1 rounded-md text-xs font-medium">
           Plage séparée
         </div>
       </div>
@@ -69,23 +69,23 @@ const ReligiousBeachCard: React.FC<ReligiousBeachCardProps> = ({ beach }) => {
         {/* Basic Info */}
         <div className="space-y-3 mt-3">
           <div className="flex items-start text-gray-600">
-            <MapPin size={18} className="mr-2 mt-1 flex-shrink-0 text-blue-600" />
+            <MapPin size={18} className="mr-2 mt-1 flex-shrink-0 text-orange-500" />
             <span className="text-sm">{beach.location.address}</span>
           </div>
           
           <div className="flex items-start text-gray-600">
-            <Calendar size={18} className="mr-2 mt-1 flex-shrink-0 text-blue-600" />
+            <Calendar size={18} className="mr-2 mt-1 flex-shrink-0 text-orange-500" />
             <div className="text-sm">
               <p className="font-medium mb-1">Horaires de séparation:</p>
-              <p className="mb-1"><span className="text-blue-700">Hommes:</span> {beach.separationSchedule.men}</p>
-              <p><span className="text-pink-600">Femmes:</span> {beach.separationSchedule.women}</p>
+              <p className="mb-1"><span className="text-rose-600">Hommes:</span> {beach.separationSchedule.men}</p>
+              <p><span className="text-pink-500">Femmes:</span> {beach.separationSchedule.women}</p>
             </div>
           </div>
         </div>
         
         {/* Show More Button */}
         <button
-          className="mt-4 w-full flex items-center justify-center text-blue-600 hover:text-blue-700 transition-colors py-2 border-t border-gray-100"
+          className="mt-4 w-full flex items-center justify-center text-orange-500 hover:text-orange-600 transition-colors py-2 border-t border-gray-100"
           onClick={() => setIsExpanded(!isExpanded)}
         >
           <span className="text-sm font-medium mr-1">
@@ -104,10 +104,10 @@ const ReligiousBeachCard: React.FC<ReligiousBeachCardProps> = ({ beach }) => {
             
             <div>
               <h4 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                <Scroll size={16} className="mr-2 text-blue-600" />
+                <Scroll size={16} className="mr-2 text-rose-500" />
                 Code vestimentaire:
               </h4>
-              <p className="text-sm text-gray-600 bg-blue-50 p-3 rounded-md">
+              <p className="text-sm text-gray-600 bg-pink-50 p-3 rounded-md">
                 {beach.dressCode}
               </p>
             </div>
@@ -117,7 +117,7 @@ const ReligiousBeachCard: React.FC<ReligiousBeachCardProps> = ({ beach }) => {
               <ul className="text-sm text-gray-600 space-y-1">
                 {beach.specialFacilities.map((facility, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
+                    <span className="text-orange-500 mr-2">•</span>
                     {facility}
                   </li>
                 ))}
@@ -126,13 +126,13 @@ const ReligiousBeachCard: React.FC<ReligiousBeachCardProps> = ({ beach }) => {
             
             <div>
               <h4 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                <Info size={16} className="mr-2 text-blue-600" />
+                <Info size={16} className="mr-2 text-rose-500" />
                 Règles particulières:
               </h4>
               <ul className="text-sm text-gray-600 space-y-1">
                 {beach.specialRules.map((rule, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
+                    <span className="text-orange-500 mr-2">•</span>
                     {rule}
                   </li>
                 ))}
@@ -149,7 +149,7 @@ const ReligiousBeachCard: React.FC<ReligiousBeachCardProps> = ({ beach }) => {
               href={`https://www.google.com/maps/search/?api=1&query=${beach.location.latitude},${beach.location.longitude}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full bg-blue-600 text-white text-center py-2 rounded-md hover:bg-blue-700 transition-colors mt-4"
+              className="block w-full bg-orange-500 text-white text-center py-2 rounded-md hover:bg-orange-600 transition-colors mt-4"
             >
               Voir sur Google Maps
             </a>

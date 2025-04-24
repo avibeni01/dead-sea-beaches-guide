@@ -13,8 +13,8 @@ const ReligiousBeachesSection: React.FC = () => {
           Pour les visiteurs observant des pratiques religieuses strictes, certaines plages de la Mer Morte proposent des horaires de séparation entre hommes et femmes, ainsi que des installations adaptées aux exigences religieuses.
         </p>
         
-        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-md mb-10 max-w-3xl mx-auto">
-          <h3 className="text-lg font-semibold text-blue-800 mb-2">Information importante</h3>
+        <div className="bg-pink-50 border-l-4 border-pink-500 p-4 rounded-md mb-10 max-w-3xl mx-auto">
+          <h3 className="text-lg font-semibold text-pink-800 mb-2">Information importante</h3>
           <p className="text-gray-700">
             Les plages séparées respectent strictement les horaires de séparation entre hommes et femmes. Veuillez vérifier les jours et heures spécifiques avant votre visite, car ils peuvent varier selon la saison et les fêtes religieuses. Le respect du code vestimentaire et des règles particulières est obligatoire.
           </p>

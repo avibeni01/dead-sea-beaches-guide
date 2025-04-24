@@ -2,7 +2,7 @@ import React from 'react';
 
 const MediterraneanIntroduction: React.FC = () => {
   return (
-    <section id="mediterranean-introduction" className="py-20 bg-gradient-to-b from-blue-50 to-white">
+    <section id="mediterranean-introduction" className="py-20 bg-gradient-to-b from-rose-50 to-white">
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">
@@ -22,8 +22,8 @@ const MediterraneanIntroduction: React.FC = () => {
               Ce guide vous présente les 20 plus belles plages de la côte méditerranéenne israélienne, chacune avec ses particularités et son charme unique. Des plages urbaines de Tel Aviv aux réserves naturelles plus isolées, en passant par les magnifiques étendues de sable de Netanya, Herzliya, Ashdod et Ashkelon, découvrez toute la richesse du littoral israélien.
             </p>
             
-            <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 mb-6">
-              <h3 className="text-xl font-semibold text-blue-800 mb-3">Le saviez-vous?</h3>
+            <div className="bg-pink-50 p-6 rounded-lg border border-pink-100 mb-6">
+              <h3 className="text-xl font-semibold text-rose-800 mb-3">Le saviez-vous?</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>• Les plages de Tel Aviv sont régulièrement classées parmi les meilleures plages urbaines au monde.</li>
                 <li>• La côte méditerranéenne israélienne abrite plusieurs sites archéologiques sous-marins, notamment à Césarée.</li>
@@ -33,13 +33,13 @@ const MediterraneanIntroduction: React.FC = () => {
             </div>
             
             <div className="flex flex-col md:flex-row md:items-center md:space-x-6">
-              <div className="md:w-1/2 mb-4 md:mb-0">
+                <div className="md:w-1/2 mb-4 md:mb-0">
                 <img 
-                  src="https://images.pexels.com/photos/15858536/pexels-photo-15858536/free-photo-of-ville-mer-plage-paysage.jpeg" 
+                  src="https://images.pexels.com/photos/31712449/pexels-photo-31712449.jpeg" 
                   alt="Vue panoramique de Tel Aviv et sa plage" 
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
-              </div>
+                </div>
               <div className="md:w-1/2">
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Comment profiter au maximum des plages méditerranéennes</h3>
                 <p className="text-gray-700">
@@ -48,19 +48,19 @@ const MediterraneanIntroduction: React.FC = () => {
               </div>
             </div>
             
-            <div className="mt-8 p-5 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-100">
-              <h3 className="text-xl font-semibold text-blue-800 mb-3 text-center">Les différentes régions côtières</h3>
+            <div className="mt-8 p-5 bg-gradient-to-r from-orange-50 to-rose-50 rounded-lg border border-pink-100">
+              <h3 className="text-xl font-semibold text-rose-800 mb-3 text-center">Les différentes régions côtières</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
                 <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <h4 className="font-semibold text-blue-700 mb-2">Tel Aviv et centre</h4>
+                  <h4 className="font-semibold text-rose-700 mb-2">Tel Aviv et centre</h4>
                   <p className="text-sm text-gray-600">Plages urbaines animées avec excellentes infrastructures, activités et vie nocturne. Idéal pour les voyageurs recherchant une combinaison de plage et d'ambiance citadine.</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <h4 className="font-semibold text-blue-700 mb-2">Herzliya et Netanya</h4>
+                  <h4 className="font-semibold text-orange-700 mb-2">Herzliya et Netanya</h4>
                   <p className="text-sm text-gray-600">Plages plus spacieuses et moins bondées, avec un excellent équilibre entre nature et commodités. Parfait pour les familles et ceux qui préfèrent un rythme plus détendu.</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <h4 className="font-semibold text-blue-700 mb-2">Haïfa et nord</h4>
+                  <h4 className="font-semibold text-pink-700 mb-2">Haïfa et nord</h4>
                   <p className="text-sm text-gray-600">Mélange de plages urbaines et de réserves naturelles, offrant des paysages plus diversifiés et souvent moins touristiques. Idéal pour les amoureux de la nature et d'authenticité.</p>
                 </div>
               </div>

@@ -7,9 +7,9 @@ export const mediterraneanBeaches: MediterraneanBeach[] = [
     hebrewName: "חוף גורדון",
     description: "L'une des plages les plus populaires de Tel Aviv, située en plein cœur de la ville. Gordon Beach offre un cadre animé avec de nombreuses installations et activités. C'est un endroit privilégié pour les locaux et les touristes, où l'ambiance de Tel Aviv se ressent pleinement.",
     images: [
-      "https://images.pexels.com/photos/10563860/pexels-photo-10563860.jpeg",
-      "https://images.pexels.com/photos/10563857/pexels-photo-10563857.jpeg",
-      "https://images.pexels.com/photos/10563859/pexels-photo-10563859.jpeg"
+      "https://visit-tlv.co.il/wp-content/uploads/2021/07/%D7%97%D7%95%D7%A3-%D7%AA%D7%9C-%D7%91%D7%A8%D7%95%D7%9A-%D7%92%D7%99%D7%90-%D7%99%D7%97%D7%99%D7%90%D7%9C%D7%99.jpg",
+      "https://herzliya-marina-lagoon-apartment.co.il/wp-content/uploads/2019/04/dd9b612d27b0cabd92b170b07714f0b1.jpg",
+      "https://herzliya-marina-lagoon-apartment.co.il/wp-content/uploads/2019/04/810aacbfd58f216c3577013ec3aad384.jpg"
     ],
     location: {
       city: "Tel Aviv",
@@ -72,9 +72,8 @@ export const mediterraneanBeaches: MediterraneanBeach[] = [
     hebrewName: "חוף פרישמן",
     description: "Située au cœur de Tel Aviv, la plage de Frishman est l'une des plus appréciées de la ville. Elle attire une foule diverse, des familles aux jeunes branchés, et offre une excellente infrastructure. Elle est particulièrement connue pour son ambiance animée et ses couchers de soleil spectaculaires.",
     images: [
-      "https://images.pexels.com/photos/16690330/pexels-photo-16690330/free-photo-of-les-gens-mer-plage-sable.jpeg",
-      "https://images.pexels.com/photos/15953915/pexels-photo-15953915/free-photo-of-mer-plage-eau-vacances.jpeg",
-      "https://images.pexels.com/photos/14576493/pexels-photo-14576493.jpeg"
+      "https://www.hafakot.co.il/wp-content/uploads/2022/06/%D7%9E%D7%A7%D7%95%D7%9E%D7%95%D7%AA-%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D-%D7%9C%D7%90%D7%99%D7%A8%D7%95%D7%A2.webp",
+      "https://static.travelgay.com/media/27225/frishman-beach-tel-aviv.jpg"
     ],
     location: {
       city: "Tel Aviv",
@@ -136,9 +135,9 @@ export const mediterraneanBeaches: MediterraneanBeach[] = [
     hebrewName: "חוף ירושלים",
     description: "Cette plage centrale offre une atmosphère décontractée et est très populaire auprès des jeunes locaux. Située entre les plages de Geula et de Frishman, Jerusalem Beach est connue pour son ambiance conviviale et sa facilité d'accès depuis le centre-ville.",
     images: [
-      "https://images.pexels.com/photos/15858536/pexels-photo-15858536/free-photo-of-ville-mer-plage-paysage.jpeg",
-      "https://images.pexels.com/photos/10542668/pexels-photo-10542668.jpeg",
-      "https://images.pexels.com/photos/15953916/pexels-photo-15953916/free-photo-of-plage-eau-ete-sable.jpeg"
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/cb/da/ba/tel-aviv-beach.jpg?h=-1&s=1&w=1200",
+      "https://project-tlv.info/wp-content/uploads/2022/01/20211225_100904.jpg",
+      "https://herzliya-marina-lagoon-apartment.co.il/wp-content/uploads/2019/04/jerusalem-beach-58634c0cd27fe.jpg"
     ],
     location: {
       city: "Tel Aviv",
@@ -198,9 +197,9 @@ export const mediterraneanBeaches: MediterraneanBeach[] = [
     hebrewName: "חוף הרצליה",
     description: "Les plages de Herzliya offrent un cadre plus paisible que celles de Tel Aviv tout en restant facilement accessibles. Avec leur sable fin et leurs eaux claires, elles sont particulièrement appréciées des familles et de ceux qui recherchent une atmosphère plus relaxante. La marina adjacente ajoute une touche de sophistication.",
     images: [
+      "https://www.herzliya.muni.il/uploads/n/1643809259.1547.jpg",
       "https://images.pexels.com/photos/10559912/pexels-photo-10559912.jpeg",
-      "https://images.pexels.com/photos/1705254/pexels-photo-1705254.jpeg",
-      "https://images.pexels.com/photos/3355007/pexels-photo-3355007.jpeg"
+      "https://sharonline.co.il/wp-content/uploads/2022/04/acadia.jpg"
     ],
     location: {
       city: "Herzliya",

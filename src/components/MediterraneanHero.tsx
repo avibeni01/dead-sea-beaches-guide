@@ -7,11 +7,10 @@ const MediterraneanHero: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center z-0" 
         style={{ 
-          backgroundImage: 'url(https://images.pexels.com/photos/15858536/pexels-photo-15858536/free-photo-of-ville-mer-plage-paysage.jpeg)',
+          backgroundImage: 'url(https://images.pexels.com/photos/31726444/pexels-photo-31726444.jpeg)', // Updated Mediterranean Beach option
         }}
       >
-        {/* Overlay gradient for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-transparent"></div>
+        {/* Overlay gradient pour mieux voir le texte */}
       </div>
       
       {/* Content */}
@@ -26,13 +25,13 @@ const MediterraneanHero: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in">
             <a 
               href="#mediterranean-beaches" 
-              className="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 shadow-lg"
+              className="px-8 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg"
             >
               Découvrir les plages
             </a>
             <a 
               href="#mediterranean-safety" 
-              className="px-8 py-3 bg-pink-600 text-white rounded-lg font-semibold hover:bg-pink-700 transition-colors duration-300 shadow-lg"
+              className="px-8 py-3 bg-pink-500 text-white rounded-lg font-semibold hover:bg-pink-600 transition-colors duration-300 shadow-lg"
             >
               Conseils de sécurité
             </a>

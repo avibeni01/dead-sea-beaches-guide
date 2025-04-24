@@ -16,8 +16,8 @@ const SafetySection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Safety Tips */}
           <div>
-            <div className="bg-orange-50 rounded-t-lg p-4 flex items-center border-b border-orange-100">
-              <AlertTriangle size={24} className="text-orange-600 mr-3" />
+            <div className="bg-red-50 rounded-t-lg p-4 flex items-center border-b border-red-100">
+              <AlertTriangle size={24} className="text-red-600 mr-3" />
               <h3 className="text-xl font-semibold text-gray-800">Conseils de Sécurité</h3>
             </div>
             <div className="bg-white rounded-b-lg shadow-md p-6">
@@ -25,12 +25,12 @@ const SafetySection: React.FC = () => {
                 {safetyTips.map((tip) => (
                   <div key={tip.id} className="flex">
                     <div className="mr-4 mt-1">
-                      {tip.id === 1 && <Waves className="h-5 w-5 text-orange-500" />}
-                      {tip.id === 2 && <Droplets className="h-5 w-5 text-orange-500" />}
-                      {tip.id === 3 && <FirstAid className="h-5 w-5 text-orange-500" />}
-                      {tip.id === 4 && <Info className="h-5 w-5 text-orange-500" />}
-                      {tip.id === 5 && <Droplets className="h-5 w-5 text-orange-500" />}
-                      {tip.id === 6 && <Sun className="h-5 w-5 text-orange-500" />}
+                      {tip.id === 1 && <Waves className="h-5 w-5 text-red-500" />}
+                      {tip.id === 2 && <Droplets className="h-5 w-5 text-red-500" />}
+                      {tip.id === 3 && <FirstAid className="h-5 w-5 text-red-500" />}
+                      {tip.id === 4 && <Info className="h-5 w-5 text-red-500" />}
+                      {tip.id === 5 && <Droplets className="h-5 w-5 text-red-500" />}
+                      {tip.id === 6 && <Sun className="h-5 w-5 text-red-500" />}
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800 mb-1">{tip.title}</h4>
@@ -40,8 +40,8 @@ const SafetySection: React.FC = () => {
                 ))}
               </div>
               
-              <div className="mt-8 p-4 bg-orange-50 rounded-lg border border-orange-100">
-                <h4 className="font-semibold text-orange-800 mb-2 flex items-center">
+              <div className="mt-8 p-4 bg-red-50 rounded-lg border border-red-100">
+                <h4 className="font-semibold text-red-800 mb-2 flex items-center">
                   <AlertTriangle size={18} className="mr-2" />
                   En cas d'urgence
                 </h4>
@@ -54,15 +54,15 @@ const SafetySection: React.FC = () => {
           
           {/* Practical Tips */}
           <div>
-            <div className="bg-blue-50 rounded-t-lg p-4 flex items-center border-b border-blue-100">
-              <Info size={24} className="text-blue-600 mr-3" />
+            <div className="bg-orange-50 rounded-t-lg p-4 flex items-center border-b border-orange-100">
+              <Info size={24} className="text-orange-600 mr-3" />
               <h3 className="text-xl font-semibold text-gray-800">Recommandations Pratiques</h3>
             </div>
             <div className="bg-white rounded-b-lg shadow-md p-6">
               <div className="space-y-6">
                 {practicalTips.map((tip) => (
                   <div key={tip.id} className="flex">
-                    <div className="mr-4 mt-1 text-blue-500 font-bold">
+                    <div className="mr-4 mt-1 text-orange-500 font-bold">
                       {tip.id}.
                     </div>
                     <div>
@@ -73,8 +73,8 @@ const SafetySection: React.FC = () => {
                 ))}
               </div>
               
-              <div className="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-100">
-                <h4 className="font-semibold text-blue-800 mb-2">Liste d'objets essentiels à apporter:</h4>
+              <div className="mt-8 p-4 bg-orange-50 rounded-lg border border-orange-100">
+                <h4 className="font-semibold text-orange-800 mb-2">Liste d'objets essentiels à apporter:</h4>
                 <ul className="text-gray-700 text-sm space-y-1">
                   <li>• Chaussures d'eau ou sandales résistantes au sel</li>
                   <li>• Crème solaire indice 50+ résistante à l'eau</li>

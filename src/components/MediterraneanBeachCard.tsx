@@ -22,11 +22,11 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
 
   // Function to get border color based on beach type
   const getBorderColor = () => {
-    if (beach.type.includes(BeachType.NATURE)) return 'border-green-600';
-    if (beach.type.includes(BeachType.FAMILY)) return 'border-blue-600';
-    if (beach.type.includes(BeachType.SPORTS)) return 'border-orange-600';
-    if (beach.type.includes(BeachType.DOG_FRIENDLY)) return 'border-purple-600';
-    return 'border-teal-600';
+    if (beach.type.includes(BeachType.NATURE)) return 'border-red-600';
+    if (beach.type.includes(BeachType.FAMILY)) return 'border-pink-500';
+    if (beach.type.includes(BeachType.SPORTS)) return 'border-orange-500';
+    if (beach.type.includes(BeachType.DOG_FRIENDLY)) return 'border-rose-600';
+    return 'border-orange-500';
   };
 
   // Function to render water quality stars
@@ -82,7 +82,7 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
         </div>
         
         {/* City Badge */}
-        <div className="absolute top-2 left-2 bg-blue-600 text-white px-3 py-1 rounded-md text-xs font-medium">
+        <div className="absolute top-2 left-2 bg-rose-500 text-white px-3 py-1 rounded-md text-xs font-medium">
           {beach.location.city}
         </div>
       </div>
@@ -97,8 +97,8 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
           
           {/* Wheelchair Access */}
           {beach.accessibility.wheelchairAccess && (
-            <div className="bg-blue-100 p-1 rounded-md" title="Accessible aux fauteuils roulants">
-              <Wheelchair size={18} className="text-blue-700" />
+            <div className="bg-pink-100 p-1 rounded-md" title="Accessible aux fauteuils roulants">
+              <Wheelchair size={18} className="text-pink-700" />
             </div>
           )}
         </div>
@@ -111,12 +111,12 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
             
             switch(type) {
               case BeachType.NATURE:
-                bgColor = 'bg-green-100';
-                textColor = 'text-green-700';
+                bgColor = 'bg-red-100';
+                textColor = 'text-red-700';
                 break;
               case BeachType.FAMILY:
-                bgColor = 'bg-blue-100';
-                textColor = 'text-blue-700';
+                bgColor = 'bg-pink-100';
+                textColor = 'text-pink-700';
                 break;
               case BeachType.SPORTS:
                 bgColor = 'bg-orange-100';
@@ -127,8 +127,8 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
                 textColor = 'text-gray-700';
                 break;
               case BeachType.DOG_FRIENDLY:
-                bgColor = 'bg-purple-100';
-                textColor = 'text-purple-700';
+                bgColor = 'bg-rose-100';
+                textColor = 'text-rose-700';
                 break;
               default:
                 break;
@@ -145,22 +145,22 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
         {/* Basic Info */}
         <div className="space-y-2 mt-3">
           <div className="flex items-center text-gray-600">
-            <MapPin size={18} className="mr-2 flex-shrink-0 text-blue-600" />
+            <MapPin size={18} className="mr-2 flex-shrink-0 text-orange-500" />
             <span className="text-sm">{beach.location.address}</span>
           </div>
           <div className="flex items-center text-gray-600">
-            <Clock size={18} className="mr-2 flex-shrink-0 text-blue-600" />
+            <Clock size={18} className="mr-2 flex-shrink-0 text-orange-500" />
             <span className="text-sm">{beach.hours.opening} - {beach.hours.closing}</span>
           </div>
           <div className="flex items-center text-gray-600">
-            <DollarSign size={18} className="mr-2 flex-shrink-0 text-blue-600" />
+            <DollarSign size={18} className="mr-2 flex-shrink-0 text-orange-500" />
             <span className="text-sm">{beach.entranceFee}</span>
           </div>
         </div>
         
         {/* Water Quality */}
         <div className="mt-4 flex items-center">
-          <Droplets size={18} className="mr-2 text-blue-600" />
+          <Droplets size={18} className="mr-2 text-rose-500" />
           <span className="text-sm font-medium text-gray-700 mr-2">Qualité de l'eau:</span>
           {renderWaterQualityStars(beach.waterQuality.rating)}
         </div>
@@ -174,7 +174,7 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
                 key={index}
                 className="inline-flex items-center px-2 py-1 bg-gray-100 text-gray-800 text-xs rounded-md"
               >
-                <Check size={14} className="mr-1 text-blue-600" />
+                <Check size={14} className="mr-1 text-rose-500" />
                 {facility}
               </span>
             ))}
@@ -183,7 +183,7 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
         
         {/* Show More Button */}
         <button
-          className="mt-4 w-full flex items-center justify-center text-blue-600 hover:text-blue-700 transition-colors py-2 border-t border-gray-100"
+          className="mt-4 w-full flex items-center justify-center text-orange-500 hover:text-orange-600 transition-colors py-2 border-t border-gray-100"
           onClick={() => setIsExpanded(!isExpanded)}
         >
           <span className="text-sm font-medium mr-1">
@@ -211,7 +211,7 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
             
             <div>
               <h4 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                <Waves size={16} className="mr-2 text-blue-600" />
+                <Waves size={16} className="mr-2 text-rose-500" />
                 Conditions de baignade:
               </h4>
               <p className="text-sm text-gray-600">
@@ -224,11 +224,11 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
               <h4 className="text-sm font-semibold text-gray-700 mb-2">Accessibilité:</h4>
               <div className="space-y-1">
                 <div className="flex items-center text-sm text-gray-600">
-                  <Car size={16} className="mr-2 flex-shrink-0 text-blue-600" />
+                  <Car size={16} className="mr-2 flex-shrink-0 text-orange-500" />
                   <span>{beach.accessibility.parking}</span>
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
-                  <Bus size={16} className="mr-2 flex-shrink-0 text-blue-600" />
+                  <Bus size={16} className="mr-2 flex-shrink-0 text-orange-500" />
                   <span>{beach.accessibility.publicTransport}</span>
                 </div>
               </div>
@@ -252,7 +252,7 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
               <ul className="text-sm text-gray-600 space-y-1">
                 {beach.nearbyAttractions.map((attraction, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
+                    <span className="text-rose-500 mr-2">•</span>
                     {attraction}
                   </li>
                 ))}
@@ -269,7 +269,7 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
               href={`https://www.google.com/maps/search/?api=1&query=${beach.location.latitude},${beach.location.longitude}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full bg-blue-600 text-white text-center py-2 rounded-md hover:bg-blue-700 transition-colors mt-4"
+              className="block w-full bg-orange-500 text-white text-center py-2 rounded-md hover:bg-orange-600 transition-colors mt-4"
             >
               Voir sur Google Maps
             </a>

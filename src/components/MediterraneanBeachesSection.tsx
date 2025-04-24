@@ -50,7 +50,7 @@ const MediterraneanBeachesSection: React.FC = () => {
   };
 
   return (
-    <section id="mediterranean-beaches" className="py-20 bg-gradient-to-b from-blue-50 to-white">
+    <section id="mediterranean-beaches" className="py-20 bg-gradient-to-b from-blue-50 to-white"> {/* Keep Bleu clair gradient */}
       <div className="container mx-auto px-4 md:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-6">
           Les 20 Plus Belles Plages de la Méditerranée Israélienne
@@ -67,14 +67,14 @@ const MediterraneanBeachesSection: React.FC = () => {
               placeholder="Rechercher une plage par nom, ville ou description..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" // Orange vif focus
             />
             <Search className="absolute left-3 top-3.5 text-gray-400" size={18} />
           </div>
           
           <button
             onClick={() => setShowFilters(!showFilters)}
-            className="flex items-center gap-2 px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="flex items-center gap-2 px-4 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors" // Orange vif button
           >
             <SlidersHorizontal size={18} />
             {showFilters ? "Masquer les filtres" : "Afficher les filtres"}
@@ -101,7 +101,7 @@ const MediterraneanBeachesSection: React.FC = () => {
                 <select
                   value={cityFilter}
                   onChange={(e) => setCityFilter(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" // Orange vif focus
                 >
                   <option value="ALL">Toutes les villes</option>
                   {cities.filter(city => city !== 'ALL').map((city) => (
@@ -116,7 +116,7 @@ const MediterraneanBeachesSection: React.FC = () => {
                 <select
                   value={typeFilter}
                   onChange={(e) => setTypeFilter(e.target.value as BeachType | 'ALL')}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" // Orange vif focus
                 >
                   <option value="ALL">Tous les types</option>
                   {Object.values(BeachType).map((type) => (
@@ -131,7 +131,7 @@ const MediterraneanBeachesSection: React.FC = () => {
                 <select
                   value={facilityFilter}
                   onChange={(e) => setFacilityFilter(e.target.value as BeachFacility | 'ALL')}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" // Orange vif focus
                 >
                   <option value="ALL">Toutes les installations</option>
                   {Object.values(BeachFacility).map((facility) => (
@@ -146,7 +146,7 @@ const MediterraneanBeachesSection: React.FC = () => {
                 <select
                   value={waveSizeFilter}
                   onChange={(e) => setWaveSizeFilter(e.target.value as WaveSize | 'ALL')}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" // Orange vif focus
                 >
                   <option value="ALL">Toutes tailles</option>
                   {Object.values(WaveSize).map((size) => (
@@ -163,7 +163,7 @@ const MediterraneanBeachesSection: React.FC = () => {
                   type="checkbox"
                   checked={wheelchairFilter}
                   onChange={(e) => setWheelchairFilter(e.target.checked)}
-                  className="rounded text-blue-600 focus:ring-blue-500 h-4 w-4"
+                  className="rounded text-orange-500 focus:ring-orange-500 h-4 w-4" // Orange vif checkbox
                 />
                 <span className="ml-2 text-sm text-gray-700">Uniquement les plages accessibles aux fauteuils roulants</span>
               </label>
@@ -187,7 +187,7 @@ const MediterraneanBeachesSection: React.FC = () => {
               <p className="text-gray-500 text-lg">Aucune plage ne correspond à vos critères de recherche.</p>
               <button
                 onClick={resetFilters}
-                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                className="mt-4 px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors" // Orange vif button
               >
                 Réinitialiser les filtres
               </button>

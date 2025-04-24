@@ -34,44 +34,44 @@ const MediterraneanHeader: React.FC<MediterraneanHeaderProps> = ({ onSwitchApp }
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="#" className="text-2xl font-semibold text-blue-600">
+            <a href="#" className="text-2xl font-semibold text-rose-500">
               Plages d'Israël
             </a>
           </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#mediterranean-introduction" className="text-gray-700 hover:text-blue-600 font-medium">
+            <a href="#mediterranean-introduction" className="text-gray-700 hover:text-orange-500 font-medium">
               Introduction
             </a>
             <div className="relative group">
-              <button className="flex items-center text-gray-700 hover:text-blue-600 font-medium">
+              <button className="flex items-center text-gray-700 hover:text-orange-500 font-medium">
                 Plages <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-20 transform opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 origin-top-left hidden group-hover:block">
-                <a href="#mediterranean-beaches" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <a href="#mediterranean-beaches" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500">
                   Les 20 plus belles plages
                 </a>
-                <a href="#dead-sea-beaches" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <a href="#dead-sea-beaches" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500">
                   Plages de la Mer Morte
                 </a>
               </div>
             </div>
-            <a href="#mediterranean-safety" className="text-gray-700 hover:text-blue-600 font-medium">
+            <a href="#mediterranean-safety" className="text-gray-700 hover:text-orange-500 font-medium">
               Sécurité
             </a>
-            <a href="#mediterranean-transport" className="text-gray-700 hover:text-blue-600 font-medium">
+            <a href="#mediterranean-transport" className="text-gray-700 hover:text-orange-500 font-medium">
               Transport
             </a>
 
             {/* App Switcher Buttons */}
             <div className="flex items-center space-x-3 ml-6 border-l pl-4 border-gray-200">
-              <span className="px-3 py-1.5 rounded-md text-sm font-medium bg-blue-600 text-white">
+              <span className="px-3 py-1.5 rounded-md text-sm font-medium bg-rose-500 text-white">
                 Plages Méditerranée
               </span>
               <button
                 onClick={onSwitchApp}
-                className="px-3 py-1.5 rounded-md text-sm font-medium bg-white text-orange-600 border border-orange-600 hover:bg-orange-50 transition-colors"
+                className="px-3 py-1.5 rounded-md text-sm font-medium bg-white text-orange-500 border border-orange-500 hover:bg-orange-50 transition-colors"
               >
                 Plages Mer Morte
               </button>
@@ -83,7 +83,7 @@ const MediterraneanHeader: React.FC<MediterraneanHeaderProps> = ({ onSwitchApp }
             {/* App Switcher Button for Mobile */}
             <button
               onClick={onSwitchApp}
-              className="px-3 py-1.5 rounded-md text-xs font-medium bg-white text-orange-600 border border-orange-600 hover:bg-orange-50 transition-colors"
+              className="px-3 py-1.5 rounded-md text-xs font-medium bg-white text-orange-500 border border-orange-500 hover:bg-orange-50 transition-colors"
             >
               Mer Morte
             </button>
@@ -106,27 +106,27 @@ const MediterraneanHeader: React.FC<MediterraneanHeaderProps> = ({ onSwitchApp }
         } overflow-hidden`}
       >
         <nav className="flex flex-col px-4 py-2 space-y-2">
-          <a href="#mediterranean-introduction" className="text-gray-700 hover:text-blue-600 py-1" onClick={toggleMenu}>
+          <a href="#mediterranean-introduction" className="text-gray-700 hover:text-orange-500 py-1" onClick={toggleMenu}>
             Introduction
           </a>
           <div className="relative group">
-            <button className="flex items-center justify-between w-full text-gray-700 hover:text-blue-600 py-1">
+            <button className="flex items-center justify-between w-full text-gray-700 hover:text-orange-500 py-1">
               <span>Plages</span>
               <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-focus-within:rotate-180" />
             </button>
             <div className="pl-4 mt-1 space-y-1 hidden group-focus-within:block">
-              <a href="#mediterranean-beaches" className="block text-sm text-gray-600 hover:text-blue-600 py-1" onClick={toggleMenu}>
+              <a href="#mediterranean-beaches" className="block text-sm text-gray-600 hover:text-orange-500 py-1" onClick={toggleMenu}>
                 Les 20 plus belles plages
               </a>
-              <a href="#dead-sea-beaches" className="block text-sm text-gray-600 hover:text-blue-600 py-1" onClick={toggleMenu}>
+              <a href="#dead-sea-beaches" className="block text-sm text-gray-600 hover:text-orange-500 py-1" onClick={toggleMenu}>
                 Plages de la Mer Morte
               </a>
             </div>
           </div>
-          <a href="#mediterranean-safety" className="text-gray-700 hover:text-blue-600 py-1" onClick={toggleMenu}>
+          <a href="#mediterranean-safety" className="text-gray-700 hover:text-orange-500 py-1" onClick={toggleMenu}>
             Sécurité
           </a>
-          <a href="#mediterranean-transport" className="text-gray-700 hover:text-blue-600 py-1" onClick={toggleMenu}>
+          <a href="#mediterranean-transport" className="text-gray-700 hover:text-orange-500 py-1" onClick={toggleMenu}>
             Transport
           </a>
           {/* Mobile App Switcher - Already handled outside the menu */}

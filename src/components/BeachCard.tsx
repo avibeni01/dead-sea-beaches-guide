@@ -54,7 +54,7 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
         </div>
         
         {/* Beach Type Badge */}
-        <div className="absolute top-2 left-2 bg-teal-600 text-white px-3 py-1 rounded-md text-xs font-medium">
+        <div className="absolute top-2 left-2 bg-rose-600 text-white px-3 py-1 rounded-md text-xs font-medium">
           {beach.type}
         </div>
       </div>
@@ -69,8 +69,8 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
           
           {/* Wheelchair Access */}
           {beach.accessibility.wheelchairAccess && (
-            <div className="bg-blue-100 p-1 rounded-md" title="Accessible aux fauteuils roulants">
-              <Wheelchair size={18} className="text-blue-700" />
+            <div className="bg-pink-100 p-1 rounded-md" title="Accessible aux fauteuils roulants">
+              <Wheelchair size={18} className="text-pink-700" />
             </div>
           )}
         </div>
@@ -78,15 +78,15 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
         {/* Basic Info */}
         <div className="space-y-2 mt-3">
           <div className="flex items-center text-gray-600">
-            <MapPin size={18} className="mr-2 flex-shrink-0 text-teal-600" />
+            <MapPin size={18} className="mr-2 flex-shrink-0 text-orange-500" />
             <span className="text-sm">{beach.location.address}</span>
           </div>
           <div className="flex items-center text-gray-600">
-            <Clock size={18} className="mr-2 flex-shrink-0 text-teal-600" />
+            <Clock size={18} className="mr-2 flex-shrink-0 text-orange-500" />
             <span className="text-sm">{beach.hours.opening} - {beach.hours.closing}</span>
           </div>
           <div className="flex items-center text-gray-600">
-            <DollarSign size={18} className="mr-2 flex-shrink-0 text-teal-600" />
+            <DollarSign size={18} className="mr-2 flex-shrink-0 text-orange-500" />
             <span className="text-sm">{beach.entranceFee}</span>
           </div>
         </div>
@@ -100,7 +100,7 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
                 key={index}
                 className="inline-flex items-center px-2 py-1 bg-gray-100 text-gray-800 text-xs rounded-md"
               >
-                <Check size={14} className="mr-1 text-teal-600" />
+                <Check size={14} className="mr-1 text-rose-500" />
                 {facility}
               </span>
             ))}
@@ -109,7 +109,7 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
         
         {/* Show More Button */}
         <button
-          className="mt-4 w-full flex items-center justify-center text-teal-600 hover:text-teal-700 transition-colors py-2 border-t border-gray-100"
+          className="mt-4 w-full flex items-center justify-center text-orange-500 hover:text-orange-600 transition-colors py-2 border-t border-gray-100"
           onClick={() => setIsExpanded(!isExpanded)}
         >
           <span className="text-sm font-medium mr-1">
@@ -138,11 +138,11 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
               <h4 className="text-sm font-semibold text-gray-700 mb-2">Accessibilité:</h4>
               <div className="space-y-1">
                 <div className="flex items-center text-sm text-gray-600">
-                  <Car size={16} className="mr-2 flex-shrink-0 text-teal-600" />
+                  <Car size={16} className="mr-2 flex-shrink-0 text-orange-500" />
                   <span>{beach.accessibility.parking}</span>
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
-                  <Bus size={16} className="mr-2 flex-shrink-0 text-teal-600" />
+                  <Bus size={16} className="mr-2 flex-shrink-0 text-orange-500" />
                   <span>{beach.accessibility.publicTransport}</span>
                 </div>
               </div>
@@ -163,7 +163,7 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
               href={`https://www.google.com/maps/search/?api=1&query=${beach.location.latitude},${beach.location.longitude}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full bg-teal-600 text-white text-center py-2 rounded-md hover:bg-teal-700 transition-colors mt-4"
+              className="block w-full bg-orange-500 text-white text-center py-2 rounded-md hover:bg-orange-600 transition-colors mt-4"
             >
               Voir sur Google Maps
             </a>

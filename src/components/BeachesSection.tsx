@@ -24,7 +24,7 @@ const BeachesSection: React.FC = () => {
   });
 
   return (
-    <section id="best-beaches" className="py-20 bg-gray-50">
+    <section id="best-beaches" className="py-20 bg-blue-50"> {/* Changed bg-gray-50 to bg-blue-50 for consistency */}
       <div className="container mx-auto px-4 md:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-6">
           Les 10 Plus Belles Plages de la Mer Morte
@@ -41,7 +41,7 @@ const BeachesSection: React.FC = () => {
               placeholder="Rechercher une plage..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+              className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" // Orange vif focus
             />
             <Search className="absolute left-3 top-2.5 text-gray-400" size={18} />
           </div>
@@ -51,7 +51,7 @@ const BeachesSection: React.FC = () => {
               <select
                 value={filter}
                 onChange={(e) => setFilter(e.target.value as BeachType | 'ALL')}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white" // Orange vif focus
               >
                 <option value="ALL">Tous les types</option>
                 <option value={BeachType.PUBLIC}>Plages publiques</option>
@@ -63,7 +63,7 @@ const BeachesSection: React.FC = () => {
               <select
                 value={facilityFilter}
                 onChange={(e) => setFacilityFilter(e.target.value as BeachFacility | 'ALL')}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white" // Orange vif focus
               >
                 <option value="ALL">Toutes les installations</option>
                 {Object.values(BeachFacility).map((facility) => (
@@ -94,7 +94,7 @@ const BeachesSection: React.FC = () => {
                   setFilter('ALL');
                   setFacilityFilter('ALL');
                 }}
-                className="mt-4 px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-colors"
+                className="mt-4 px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors" // Orange vif button
               >
                 Réinitialiser les filtres
               </button>
