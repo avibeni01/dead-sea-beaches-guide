@@ -1,7 +1,6 @@
-// Pour le MediterraneanHeader.tsx
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import logoImg from '/LOGO.webp';
 
 interface MediterraneanHeaderProps {
   onSwitchApp: () => void;
@@ -34,8 +33,12 @@ const MediterraneanHeader: React.FC<MediterraneanHeaderProps> = ({ onSwitchApp }
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="#" className="text-2xl font-semibold text-rose-500">
-              Plages d'Israël
+            <a href="#">
+              <img
+                src={logoImg}
+                alt="Elynor Tours Logo"
+                className="h-10"
+              />
             </a>
           </div>
           
@@ -51,6 +54,9 @@ const MediterraneanHeader: React.FC<MediterraneanHeaderProps> = ({ onSwitchApp }
               <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-20 transform opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 origin-top-left hidden group-hover:block">
                 <a href="#mediterranean-beaches" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500">
                   Les 20 plus belles plages
+                </a>
+                <a href="#mediterranean-religious-beaches" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500">
+                  Plages religieuses séparées
                 </a>
                 <a href="#dead-sea-beaches" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500">
                   Plages de la Mer Morte
@@ -117,6 +123,9 @@ const MediterraneanHeader: React.FC<MediterraneanHeaderProps> = ({ onSwitchApp }
             <div className="pl-4 mt-1 space-y-1 hidden group-focus-within:block">
               <a href="#mediterranean-beaches" className="block text-sm text-gray-600 hover:text-orange-500 py-1" onClick={toggleMenu}>
                 Les 20 plus belles plages
+              </a>
+              <a href="#mediterranean-religious-beaches" className="block text-sm text-gray-600 hover:text-orange-500 py-1" onClick={toggleMenu}>
+                Plages religieuses séparées
               </a>
               <a href="#dead-sea-beaches" className="block text-sm text-gray-600 hover:text-orange-500 py-1" onClick={toggleMenu}>
                 Plages de la Mer Morte

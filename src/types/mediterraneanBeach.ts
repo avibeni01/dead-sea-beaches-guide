@@ -105,3 +105,25 @@ export enum BeachFacility {
     toCity: string;
     options: TransportOption[];
   }
+
+  export interface MediterraneanReligiousBeach {
+    id: number;
+    name: string;
+    hebrewName: string;
+    description: string;
+    images: string[];
+    location: {
+      city: string;
+      latitude: number;
+      longitude: number;
+      address: string;
+    };
+    separationSchedule: {
+      men: string;
+      women: string;
+      notes: string;
+    };
+    dressCode: string;
+    specialFacilities: string[];
+    specialRules: string[];
+  }

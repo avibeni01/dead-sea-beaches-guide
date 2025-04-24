@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import logoImg from '/LOGO.webp';
 
 interface HeaderProps {
   onSwitchApp: () => void;
@@ -32,8 +33,12 @@ const Header: React.FC<HeaderProps> = ({ onSwitchApp }) => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="#" className="text-2xl font-semibold text-rose-500">
-              Elynor Tours
+            <a href="#">
+              <img
+                src={logoImg}
+                alt="Elynor Tours Logo"
+                className="h-10"
+              />
             </a>
           </div>
           

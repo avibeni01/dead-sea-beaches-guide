@@ -3,6 +3,7 @@ import MediterraneanHeader from './components/MediterraneanHeader';
 import MediterraneanHero from './components/MediterraneanHero';
 import MediterraneanIntroduction from './components/MediterraneanIntroduction';
 import MediterraneanBeachesSection from './components/MediterraneanBeachesSection';
+import MediterraneanReligiousBeachesSection from './components/MediterraneanReligiousBeachesSection';
 import MediterraneanSafetySection from './components/MediterraneanSafetySection';
 import MediterraneanTransportSection from './components/MediterraneanTransportSection';
 
@@ -43,6 +44,7 @@ function MediterraneanApp({ onSwitchApp }: MediterraneanAppProps) {
       <MediterraneanHero />
       <MediterraneanIntroduction />
       <MediterraneanBeachesSection />
+      <MediterraneanReligiousBeachesSection />
       <MediterraneanSafetySection />
       <MediterraneanTransportSection />
     </div>

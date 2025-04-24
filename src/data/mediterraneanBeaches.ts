@@ -262,9 +262,9 @@ export const mediterraneanBeaches: MediterraneanBeach[] = [
     hebrewName: "חוף בוגרשוב",
     description: "L'une des plages les plus centrales et populaires de Tel Aviv, réputée pour son atmosphère jeune et animée. C'est l'endroit idéal pour observer la culture de plage locale et profiter de la vie urbaine de Tel Aviv tout en se relaxant en bord de mer.",
     images: [
-      "https://images.pexels.com/photos/3889843/pexels-photo-3889843.jpeg",
-      "https://images.pexels.com/photos/3889930/pexels-photo-3889930.jpeg",
-      "https://images.pexels.com/photos/7502361/pexels-photo-7502361.jpeg"
+      "https://medias.timeout.co.il/www/uploads/2021/08/shutterstock_1375449449-750x500.jpg",
+      "https://project-tlv.info/wp-content/uploads/2023/05/20230422_080727.jpg",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/4f/78/3f/beautiful-sunset.jpg?h=500&s=1&w=900"
     ],
     location: {
       city: "Tel Aviv",
@@ -326,9 +326,7 @@ export const mediterraneanBeaches: MediterraneanBeach[] = [
     hebrewName: "חוף פלמחים",
     description: "Cette magnifique plage naturelle est située dans une réserve et offre un environnement préservé, loin de l'agitation urbaine. Avec ses falaises impressionnantes et son atmosphère sauvage, Palmachim est l'endroit idéal pour ceux qui recherchent une connexion avec la nature.",
     images: [
-      "https://images.pexels.com/photos/15784305/pexels-photo-15784305/free-photo-of-cote-mer-plage-eau.jpeg",
-      "https://images.pexels.com/photos/1705253/pexels-photo-1705253.jpeg",
-      "https://images.pexels.com/photos/5589864/pexels-photo-5589864.jpeg"
+      "https://baliletayel.co.il/wp-content/uploads/2023/06/%D7%97%D7%95%D7%A3-%D7%A4%D7%9C%D7%9E%D7%97%D7%99%D7%9D.jpg","https://www.tiuli.com/image/f91aabecca38b8fcee320927e0ce75ff.jpg?height=0&width=1080","https://img.haarets.co.il/bs/00000182-19e7-db04-a39b-7bf797210000/08/2a/967751ab4cfbb501d777849b41bb/47815112.JPG?precrop=2990%2C2992%2Cx113%2Cy0"
     ],
     location: {
       city: "Rishon LeZion",
@@ -384,9 +382,7 @@ export const mediterraneanBeaches: MediterraneanBeach[] = [
     hebrewName: "חוף הבננה",
     description: "Populaire auprès des jeunes et des amateurs de sports nautiques, Banana Beach tire son nom d'un café qui s'y trouvait autrefois. C'est un lieu décontracté et convivial où l'on peut pratiquer le volleyball ou simplement profiter de l'atmosphère bohème.",
     images: [
-      "https://images.pexels.com/photos/5490357/pexels-photo-5490357.jpeg",
-      "https://images.pexels.com/photos/7519457/pexels-photo-7519457.jpeg",
-      "https://images.pexels.com/photos/8851096/pexels-photo-8851096.jpeg"
+      "https://images.openai.com/thumbnails/52c47c833f49d74bbe0d7a06028caf24.jpeg","https://images.openai.com/thumbnails/bc546ecfa48d23d351e80b919576992f.jpeg","https://www.pnaygalil.co.il/wp-content/uploads/2022/08/%D7%91%D7%A0%D7%A0%D7%94-%D7%91%D7%99%D7%A5-%D7%90%D7%9B%D7%96%D7%99%D7%91.png"
     ],
     location: {
       city: "Tel Aviv",
@@ -1398,6 +1394,189 @@ export const mediterraneanBeaches: MediterraneanBeach[] = [
             price: "15-25 NIS aller-retour",
             frequency: "Variable, consultez les horaires locaux"
           }
+        ]
+      }
+    ];
+
+    export const mediterraneanReligiousBeaches: MediterraneanReligiousBeach[] = [
+      {
+        id: 101,
+        name: "Nordau Religious Beach",
+        hebrewName: "חוף נפרד נורדאו",
+        description: "L'une des plages séparées les plus connues de Tel Aviv, située dans le quartier religieux au nord de la ville. Cette plage offre une séparation complète entre hommes et femmes, permettant aux visiteurs religieux de profiter de la Méditerranée tout en respectant leurs traditions.",
+        images: [
+          "https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg",
+          "https://images.pexels.com/photos/1001435/pexels-photo-1001435.jpeg",
+          "https://images.pexels.com/photos/14576497/pexels-photo-14576497.jpeg"
+        ],
+        location: {
+          city: "Tel Aviv",
+          latitude: 32.0958,
+          longitude: 34.7733,
+          address: "Boulevard Nordau, Tel Aviv"
+        },
+        separationSchedule: {
+          men: "Dimanche, Mardi, Jeudi: 07:00-13:00 / Lundi, Mercredi: 14:00-19:00 / Vendredi: 07:00-14:00",
+          women: "Dimanche, Mardi, Jeudi: 14:00-19:00 / Lundi, Mercredi: 07:00-13:00 / Vendredi: 14:00-16:00",
+          notes: "Fermé pendant Shabbat. Alternance spéciale pendant les fêtes religieuses, consultez le calendrier officiel."
+        },
+        dressCode: "Tenue modeste obligatoire. Pour les femmes: maillots couvrant les épaules, bras et jambes jusqu'aux genoux. Pour les hommes: shorts de bain jusqu'aux genoux.",
+        specialFacilities: [
+          "Entrées séparées pour hommes et femmes",
+          "Vestiaires privés",
+          "Zones d'ombre séparées",
+          "Personnel féminin pendant les heures réservées aux femmes",
+          "Personnel masculin pendant les heures réservées aux hommes"
+        ],
+        specialRules: [
+          "Pas de photographie pendant les heures séparées",
+          "Respect strict des horaires de séparation",
+          "Pas d'appareils électroniques dans certaines zones",
+          "Environnement calme et respectueux"
+        ]
+      },
+      {
+        id: 102,
+        name: "Hof HaDataim (Haifa)",
+        hebrewName: "חוף הדתיים חיפה",
+        description: "Située à Haïfa, cette plage séparée offre un environnement respectueux des traditions religieuses tout en permettant de profiter des eaux de la Méditerranée. Elle est particulièrement appréciée par les familles religieuses du nord d'Israël.",
+        images: [
+          "https://images.pexels.com/photos/3601454/pexels-photo-3601454.jpeg",
+          "https://images.pexels.com/photos/635047/pexels-photo-635047.jpeg",
+          "https://images.pexels.com/photos/4728618/pexels-photo-4728618.jpeg"
+        ],
+        location: {
+          city: "Haïfa",
+          latitude: 32.8256,
+          longitude: 34.9553,
+          address: "Bat Galim, Haïfa"
+        },
+        separationSchedule: {
+          men: "Dimanche, Mercredi: 07:00-13:00 / Mardi, Jeudi: 14:00-19:00 / Vendredi: 07:00-13:00",
+          women: "Dimanche, Mercredi: 14:00-19:00 / Mardi, Jeudi: 07:00-13:00 / Vendredi: 13:00-16:00",
+          notes: "Fermé pendant Shabbat et certaines fêtes religieuses. En été, les horaires peuvent être étendus."
+        },
+        dressCode: "Tenue modeste obligatoire conformément aux exigences religieuses. Couverture complète recommandée en dehors des zones de baignade.",
+        specialFacilities: [
+          "Zones complètement séparées visuellement",
+          "Vestiaires privés",
+          "Douches séparées",
+          "Aires familiales disponibles certains jours spécifiques",
+          "Parasols et chaises adaptés"
+        ],
+        specialRules: [
+          "Respect strict des horaires de séparation",
+          "Environnement calme et respectueux",
+          "Interdiction de nourriture non cachère",
+          "Observation du Shabbat dans toutes les installations"
+        ]
+      },
+      {
+        id: 103,
+        name: "Ashdod Separate Beach",
+        hebrewName: "חוף נפרד אשדוד",
+        description: "La plage séparée d'Ashdod est l'une des mieux aménagées du pays pour les visiteurs religieux. Avec ses installations modernes et son atmosphère familiale, elle offre une expérience balnéaire respectueuse des traditions religieuses dans un cadre agréable.",
+        images: [
+          "https://images.pexels.com/photos/1667004/pexels-photo-1667004.jpeg",
+          "https://images.pexels.com/photos/5490381/pexels-photo-5490381.jpeg",
+          "https://images.pexels.com/photos/14576495/pexels-photo-14576495.jpeg"
+        ],
+        location: {
+          city: "Ashdod",
+          latitude: 31.8133,
+          longitude: 34.6505,
+          address: "Promenade d'Ashdod, Ashdod"
+        },
+        separationSchedule: {
+          men: "Dimanche, Mardi, Jeudi: 08:00-14:00 / Lundi, Mercredi: 15:00-20:00 / Vendredi: 08:00-13:00",
+          women: "Dimanche, Mardi, Jeudi: 15:00-20:00 / Lundi, Mercredi: 08:00-14:00 / Vendredi: 13:00-16:00",
+          notes: "Fermé pendant Shabbat. Consultez le calendrier municipal pour les changements pendant les fêtes."
+        },
+        dressCode: "Tenue modeste exigée. Maillots couvrants pour les femmes, shorts de bain pour les hommes.",
+        specialFacilities: [
+          "Entrées distinctes avec personnel dédié",
+          "Vestiaires et douches privatives",
+          "Zones ombragées séparées",
+          "Aires de jeux pour enfants",
+          "Cafétéria cachère"
+        ],
+        specialRules: [
+          "Pas d'appareils électroniques pendant Shabbat",
+          "Respect strict des codes vestimentaires",
+          "Séparation complète selon les horaires indiqués",
+          "Nourriture exclusivement cachère dans l'enceinte"
+        ]
+      },
+      {
+        id: 104,
+        name: "Netanya Religious Beach",
+        hebrewName: "חוף דתי נתניה",
+        description: "Cette plage séparée de Netanya offre un environnement paisible pour les familles religieuses. Située au nord de la promenade principale, elle bénéficie d'infrastructures de qualité et d'une organisation rigoureuse des horaires de séparation.",
+        images: [
+          "https://images.pexels.com/photos/4728606/pexels-photo-4728606.jpeg",
+          "https://images.pexels.com/photos/12628888/pexels-photo-12628888.jpeg",
+          "https://images.pexels.com/photos/3889843/pexels-photo-3889843.jpeg"
+        ],
+        location: {
+          city: "Netanya",
+          latitude: 32.3324,
+          longitude: 34.8511,
+          address: "Promenade Nord, Netanya"
+        },
+        separationSchedule: {
+          men: "Dimanche, Mardi, Jeudi: 07:00-13:30 / Lundi, Mercredi: 14:30-20:00 / Vendredi: 07:00-12:30",
+          women: "Dimanche, Mardi, Jeudi: 14:30-20:00 / Lundi, Mercredi: 07:00-13:30 / Vendredi: 12:30-16:00",
+          notes: "Fermeture avant Shabbat. Horaires étendus pendant l'été."
+        },
+        dressCode: "Codes vestimentaires stricts selon la tradition religieuse. Maillots couvrants nécessaires.",
+        specialFacilities: [
+          "Barrières visuelles élevées",
+          "Surveillance adaptée selon les horaires",
+          "Vestiaires familiaux pour préparation",
+          "Zones de prière à l'ombre",
+          "Boutique d'articles de plage conformes"
+        ],
+        specialRules: [
+          "Interdiction de traverser les sections pendant les heures séparées",
+          "Musique uniquement à volume modéré",
+          "Pas d'aliments non-cachères",
+          "Respect des traditions pendant les jours de fêtes"
+        ]
+      },
+      {
+        id: 105,
+        name: "Herzliya Separate Beach",
+        hebrewName: "חוף נפרד הרצליה",
+        description: "La plage séparée de Herzliya offre un cadre élégant et bien entretenu pour les visiteurs religieux. Située dans un environnement prisé, elle permet de profiter des eaux méditerranéennes dans le respect des traditions religieuses.",
+        images: [
+          "https://images.pexels.com/photos/10559912/pexels-photo-10559912.jpeg",
+          "https://images.pexels.com/photos/635359/pexels-photo-635359.jpeg",
+          "https://images.pexels.com/photos/3889839/pexels-photo-3889839.jpeg"
+        ],
+        location: {
+          city: "Herzliya",
+          latitude: 32.1749,
+          longitude: 34.7961,
+          address: "Plage Nord, Herzliya"
+        },
+        separationSchedule: {
+          men: "Dimanche, Mardi, Jeudi: 08:00-14:00 / Lundi, Mercredi: 15:00-20:00 / Vendredi: 08:00-12:00",
+          women: "Dimanche, Mardi, Jeudi: 15:00-20:00 / Lundi, Mercredi: 08:00-14:00 / Vendredi: 12:00-16:00",
+          notes: "Fermé pendant Shabbat. Consultez les panneaux d'affichage pour les modifications saisonnières."
+        },
+        dressCode: "Tenue modeste exigée. Pas de vêtements révélateurs, même dans l'eau.",
+        specialFacilities: [
+          "Sections complètement séparées",
+          "Personnel adapté selon les horaires",
+          "Installations sanitaires privées",
+          "Boutique d'articles de plage conformes",
+          "Zone de repos ombragée"
+        ],
+        specialRules: [
+          "Pas de mélange entre sections hommes et femmes",
+          "Photographie limitée aux zones communes",
+          "Alimentation cachère uniquement",
+          "Pas d'appareils électroniques pendant Shabbat"
         ]
       }
     ];
