@@ -8,6 +8,7 @@ import SafetySection from './components/SafetySection';
 import TransportationSection from './components/TransportationSection';
 import MediterraneanApp from './MediterraneanApp';
 import AirportCarRental from './components/AirportCarRental';
+import SEOHead from './components/SEOHead';
 
 function App() {
   const [showMediterranean, setShowMediterranean] = useState(true);
@@ -19,15 +20,12 @@ function App() {
       if (hash.includes('car-rental')) {
         setShowCarRental(true);
         setShowMediterranean(false);
-        document.title = "Location de Voiture à l'Aéroport Ben Gourion - Guide Complet | Elynor Tours";
       } else if (hash.includes('dead-sea')) {
         setShowMediterranean(false);
         setShowCarRental(false);
-        document.title = "Les 10 Plus Belles Plages de la Mer Morte - Guide Complet | Elynor Tours";
       } else {
         setShowMediterranean(true);
         setShowCarRental(false);
-        document.title = "Les 20 Plus Belles Plages de la Méditerranée Israélienne - Guide Complet";
       }
     };
 
@@ -109,26 +107,48 @@ function App() {
     };
   }, [showMediterranean, showCarRental]);
 
-  // Plus besoin du composant AppSwitcher séparé, puisque nous allons
-  // passer les états et fonctions directement aux composants Header
-
   return (
     <div className="min-h-screen bg-white">
       {showCarRental ? (
         <>
+          <SEOHead
+            title="Location de Voiture à l'Aéroport Ben Gourion - Guide Complet | Elynor Tours"
+            description="Guide complet pour la location de voiture à l'aéroport Ben Gourion. Conseils, compagnies recommandées et informations pratiques."
+            keywords="location voiture aéroport Ben Gourion, location auto Tel Aviv, location véhicule Israël, voiture aéroport Tel Aviv"
+            canonicalUrl="https://elynortours.com/location-voiture-aeroport"
+            ogImage="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+          />
           <Header />
           <AirportCarRental />
         </>
       ) : showMediterranean ? (
-        <MediterraneanApp
-          onSwitchApp={() => {
-            setShowMediterranean(false);
-            window.history.pushState({}, '', '#dead-sea-beaches');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-        />
+        <>
+          <SEOHead
+            title="Les 20 Plus Belles Plages de la Méditerranée Israélienne - Guide Complet | Elynor Tours"
+            description="Découvrez notre guide des plus belles plages méditerranéennes d'Israël, de Tel Aviv à Haïfa. Informations pratiques, conseils et services de transport."
+            keywords="plages Israël, plages Tel Aviv, plages Herzliya, plages Haïfa, plages méditerranée, meilleurs plages Israël"
+            canonicalUrl="https://elynortours.com/plages-mediterranee"
+            ogImage="https://images.pexels.com/photos/1174732/pexels-photo-1174732.jpeg"
+            appType="mediterranean"
+          />
+          <MediterraneanApp
+            onSwitchApp={() => {
+              setShowMediterranean(false);
+              window.history.pushState({}, '', '#dead-sea-beaches');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          />
+        </>
       ) : (
         <>
+          <SEOHead
+            title="Les 10 Plus Belles Plages de la Mer Morte - Guide Complet | Elynor Tours"
+            description="Guide complet des plus belles plages de la Mer Morte, avec informations détaillées sur chaque site, conseils pratiques et options de transport."
+            keywords="plages Mer Morte, Ein Bokek, propriétés thérapeutiques, sel Mer Morte, flottaison Mer Morte, boue Mer Morte"
+            canonicalUrl="https://elynortours.com/plages-mer-morte"
+            ogImage="https://images.pexels.com/photos/4353813/pexels-photo-4353813.jpeg"
+            appType="dead-sea"
+          />
           <Header />
           <Hero />
           <Introduction />

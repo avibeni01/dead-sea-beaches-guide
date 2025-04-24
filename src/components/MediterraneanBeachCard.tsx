@@ -32,7 +32,7 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
   // Function to render water quality stars
   const renderWaterQualityStars = (rating: number) => {
     return (
-      <div className="flex">
+      <div className="flex" aria-label={`Qualité de l'eau: ${rating} sur 5 étoiles`}>
         {[...Array(5)].map((_, index) => (
           <svg 
             key={index} 
@@ -48,8 +48,43 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
     );
   };
 
+  // Function to highlight keywords for SEO
+  const highlightKeywords = (text: string) => {
+    const keywords = [
+      "Tel Aviv",
+      "Herzliya",
+      "Haïfa",
+      "Netanya",
+      "Ashdod",
+      "plage",
+      "plages",
+      "Méditerranée",
+      "méditerranéenne",
+      "sable fin",
+      "Gordon Beach",
+      "Frishman Beach",
+      "Hilton Beach",
+      "surf",
+      "sports nautiques",
+      "famille",
+      "promenade"
+    ];
+    
+    let processedText = text;
+    keywords.forEach(keyword => {
+      const regex = new RegExp(`(${keyword})`, 'gi');
+      processedText = processedText.replace(regex, '<strong>$1</strong>');
+    });
+    
+    return <span dangerouslySetInnerHTML={{ __html: processedText }} />;
+  };
+
   return (
-    <div className={`bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border-l-4 ${getBorderColor()}`}>
+    <article
+      className={`bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border-l-4 ${getBorderColor()}`}
+      itemScope
+      itemType="https://schema.org/Beach"
+    >
       {/* Image Carousel */}
       <div className="relative h-64">
         <img
@@ -91,8 +126,8 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
       <div className="p-5">
         <div className="flex justify-between items-start">
           <div>
-            <h3 className="text-xl font-bold text-gray-800 mb-1">{beach.name}</h3>
-            <p className="text-sm text-gray-500 mb-2">{beach.hebrewName}</p>
+            <h3 className="text-xl font-bold text-gray-800 mb-1" itemProp="name">{beach.name}</h3>
+            <p className="text-sm text-gray-500 mb-2" lang="he" dir="rtl">{beach.hebrewName}</p>
           </div>
           
           {/* Wheelchair Access */}
@@ -185,6 +220,8 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
         <button
           className="mt-4 w-full flex items-center justify-center text-orange-500 hover:text-orange-600 transition-colors py-2 border-t border-gray-100"
           onClick={() => setIsExpanded(!isExpanded)}
+          aria-expanded={isExpanded}
+          aria-controls={`beach-details-${beach.name.toLowerCase().replace(/\s+/g, '-')}`}
         >
           <span className="text-sm font-medium mr-1">
             {isExpanded ? "Voir moins" : "Voir plus"}
@@ -194,10 +231,15 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
         
         {/* Expanded Content */}
         {isExpanded && (
-          <div className="mt-4 pt-4 border-t border-gray-100 space-y-4">
+          <div
+            id={`beach-details-${beach.name.toLowerCase().replace(/\s+/g, '-')}`}
+            className="mt-4 pt-4 border-t border-gray-100 space-y-4"
+          >
             <div>
               <h4 className="text-sm font-semibold text-gray-700 mb-2">Description:</h4>
-              <p className="text-sm text-gray-600">{beach.description}</p>
+              <p className="text-sm text-gray-600" itemProp="description">
+                {highlightKeywords(beach.description)}
+              </p>
             </div>
             
             <div>
@@ -265,18 +307,20 @@ const MediterraneanBeachCard: React.FC<MediterraneanBeachCardProps> = ({ beach }
             </div>
             
             {/* Map Button */}
-            <a 
+            <a
               href={`https://www.google.com/maps/search/?api=1&query=${beach.location.latitude},${beach.location.longitude}`}
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full bg-orange-500 text-white text-center py-2 rounded-md hover:bg-orange-600 transition-colors mt-4"
+              itemProp="hasMap"
+              aria-label={`Voir ${beach.name} sur Google Maps`}
             >
               Voir sur Google Maps
             </a>
           </div>
         )}
       </div>
-    </div>
+    </article>
   );
 };
 

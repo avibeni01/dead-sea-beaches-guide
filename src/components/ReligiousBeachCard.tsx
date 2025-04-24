@@ -20,13 +20,39 @@ const ReligiousBeachCard: React.FC<ReligiousBeachCardProps> = ({ beach }) => {
     );
   };
 
+  // Fonction pour mettre en gras les mots-clés dans un texte
+  const highlightKeywords = (text: string) => {
+    const keywords = [
+      "plage séparée", 
+      "plages séparées", 
+      "visiteurs religieux", 
+      "hommes", 
+      "femmes",
+      "horaires de séparation",
+      "traditions religieuses",
+      "observant",
+      "Mer Morte",
+      "Ein Bokek",
+      "Neve Midbar",
+      "Kalia"
+    ];
+    
+    let processedText = text;
+    keywords.forEach(keyword => {
+      const regex = new RegExp(`(${keyword})`, 'gi');
+      processedText = processedText.replace(regex, '<strong>$1</strong>');
+    });
+    
+    return <span dangerouslySetInnerHTML={{ __html: processedText }} />;
+  };
+
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border-l-4 border-rose-600">
+    <article className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border-l-4 border-rose-600">
       {/* Image Carousel */}
       <div className="relative h-64">
         <img
           src={beach.images[currentImageIndex]}
-          alt={`${beach.name} - Photo ${currentImageIndex + 1}`}
+          alt={`Plage séparée ${beach.name} Mer Morte pour visiteurs religieux - Elynor Tours - ${currentImageIndex + 1}`}
           className="w-full h-full object-cover transition-opacity duration-500"
         />
         
@@ -34,6 +60,7 @@ const ReligiousBeachCard: React.FC<ReligiousBeachCardProps> = ({ beach }) => {
         <button
           className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-1 hover:bg-opacity-70 transition-colors"
           onClick={prevImage}
+          aria-label="Image précédente"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -42,6 +69,7 @@ const ReligiousBeachCard: React.FC<ReligiousBeachCardProps> = ({ beach }) => {
         <button
           className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-1 hover:bg-opacity-70 transition-colors"
           onClick={nextImage}
+          aria-label="Image suivante"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -62,23 +90,23 @@ const ReligiousBeachCard: React.FC<ReligiousBeachCardProps> = ({ beach }) => {
       {/* Content */}
       <div className="p-5">
         <div>
-          <h3 className="text-xl font-bold text-gray-800 mb-1">{beach.name}</h3>
-          <p className="text-sm text-gray-500 mb-3">{beach.hebrewName}</p>
+          <h2 className="text-xl font-bold text-gray-800 mb-1">{beach.name}</h2>
+          <p className="text-sm text-gray-500 mb-2" lang="he" dir="rtl">{beach.hebrewName}</p>
         </div>
         
         {/* Basic Info */}
         <div className="space-y-3 mt-3">
           <div className="flex items-start text-gray-600">
-            <MapPin size={18} className="mr-2 mt-1 flex-shrink-0 text-orange-500" />
+            <MapPin size={18} className="mr-2 mt-1 flex-shrink-0 text-orange-500" aria-hidden="true" />
             <span className="text-sm">{beach.location.address}</span>
           </div>
           
           <div className="flex items-start text-gray-600">
-            <Calendar size={18} className="mr-2 mt-1 flex-shrink-0 text-orange-500" />
+            <Calendar size={18} className="mr-2 mt-1 flex-shrink-0 text-orange-500" aria-hidden="true" />
             <div className="text-sm">
               <p className="font-medium mb-1">Horaires de séparation:</p>
-              <p className="mb-1"><span className="text-rose-600">Hommes:</span> {beach.separationSchedule.men}</p>
-              <p><span className="text-pink-500">Femmes:</span> {beach.separationSchedule.women}</p>
+              <p className="mb-1"><span className="text-rose-600"><strong>Hommes:</strong></span> {beach.separationSchedule.men}</p>
+              <p><span className="text-pink-500"><strong>Femmes:</strong></span> {beach.separationSchedule.women}</p>
             </div>
           </div>
         </div>
@@ -87,61 +115,63 @@ const ReligiousBeachCard: React.FC<ReligiousBeachCardProps> = ({ beach }) => {
         <button
           className="mt-4 w-full flex items-center justify-center text-orange-500 hover:text-orange-600 transition-colors py-2 border-t border-gray-100"
           onClick={() => setIsExpanded(!isExpanded)}
+          aria-expanded={isExpanded}
+          aria-controls={`expanded-content-${beach.id}`}
         >
           <span className="text-sm font-medium mr-1">
             {isExpanded ? "Voir moins" : "Voir plus"}
           </span>
-          {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+          {isExpanded ? <ChevronUp size={16} aria-hidden="true" /> : <ChevronDown size={16} aria-hidden="true" />}
         </button>
         
         {/* Expanded Content */}
         {isExpanded && (
-          <div className="mt-4 pt-4 border-t border-gray-100 space-y-4">
+          <div className="mt-4 pt-4 border-t border-gray-100 space-y-4" id={`expanded-content-${beach.id}`}>
             <div>
-              <h4 className="text-sm font-semibold text-gray-700 mb-2">Description:</h4>
-              <p className="text-sm text-gray-600">{beach.description}</p>
+              <h3 className="text-sm font-semibold text-gray-700 mb-2">Description:</h3>
+              <p className="text-sm text-gray-600">{highlightKeywords(beach.description)}</p>
             </div>
             
             <div>
-              <h4 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                <Scroll size={16} className="mr-2 text-rose-500" />
+              <h3 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
+                <Scroll size={16} className="mr-2 text-rose-500" aria-hidden="true" />
                 Code vestimentaire:
-              </h4>
+              </h3>
               <p className="text-sm text-gray-600 bg-pink-50 p-3 rounded-md">
-                {beach.dressCode}
+                {highlightKeywords(beach.dressCode)}
               </p>
             </div>
             
             <div>
-              <h4 className="text-sm font-semibold text-gray-700 mb-2">Installations spéciales:</h4>
+              <h3 className="text-sm font-semibold text-gray-700 mb-2">Installations spéciales:</h3>
               <ul className="text-sm text-gray-600 space-y-1">
                 {beach.specialFacilities.map((facility, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-orange-500 mr-2">•</span>
-                    {facility}
+                    <span className="text-orange-500 mr-2" aria-hidden="true">•</span>
+                    <strong>{facility}</strong>
                   </li>
                 ))}
               </ul>
             </div>
             
             <div>
-              <h4 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                <Info size={16} className="mr-2 text-rose-500" />
+              <h3 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
+                <Info size={16} className="mr-2 text-rose-500" aria-hidden="true" />
                 Règles particulières:
-              </h4>
+              </h3>
               <ul className="text-sm text-gray-600 space-y-1">
                 {beach.specialRules.map((rule, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-orange-500 mr-2">•</span>
-                    {rule}
+                    <span className="text-orange-500 mr-2" aria-hidden="true">•</span>
+                    <strong>{rule}</strong>
                   </li>
                 ))}
               </ul>
             </div>
             
             <div>
-              <h4 className="text-sm font-semibold text-gray-700 mb-2">Notes complémentaires:</h4>
-              <p className="text-sm text-gray-600">{beach.separationSchedule.notes}</p>
+              <h3 className="text-sm font-semibold text-gray-700 mb-2">Notes complémentaires:</h3>
+              <p className="text-sm text-gray-600">{highlightKeywords(beach.separationSchedule.notes)}</p>
             </div>
             
             {/* Map Button */}
@@ -156,7 +186,7 @@ const ReligiousBeachCard: React.FC<ReligiousBeachCardProps> = ({ beach }) => {
           </div>
         )}
       </div>
-    </div>
+    </article>
   );
 };
 
