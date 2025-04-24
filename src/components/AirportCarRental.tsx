@@ -15,6 +15,7 @@ import {
   AlertTriangle,
   Info
 } from 'lucide-react';
+import AirportMap from './AirportMap';
 
 // Composant pour la page de location de voiture à l'aéroport
 const AirportCarRental = () => {
@@ -25,7 +26,7 @@ const AirportCarRental = () => {
     {
       id: 1,
       name: "Hertz",
-      logo: "https://1000logos.net/wp-content/uploads/2017/08/Hertz-Logo.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Hertz_Logo.svg/512px-Hertz_Logo.svg.png?20140813233829", // Updated Hertz logo URL (Wikimedia Commons SVG)
       location: "Terminal 3, Niveau -1, Zone Est",
       hours: "24h/24, 7j/7",
       vehicles: ["Économique", "Compact", "SUV", "Premium"],
@@ -35,7 +36,7 @@ const AirportCarRental = () => {
     {
       id: 2,
       name: "Avis",
-      logo: "https://logos-world.net/wp-content/uploads/2021/09/Avis-Logo.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Avis_logo_wo_r.svg/640px-Avis_logo_wo_r.svg.png", // Kept the original as it's a commonly used web version
       location: "Terminal 3, Niveau -1, Zone Ouest",
       hours: "06:00 - 23:00, 7j/7",
       vehicles: ["Économique", "Intermédiaire", "Familiale", "Premium"],
@@ -45,7 +46,7 @@ const AirportCarRental = () => {
     {
       id: 3,
       name: "Budget",
-      logo: "https://logos-world.net/wp-content/uploads/2021/08/Budget-Logo.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Budget_logo.svg/640px-Budget_logo.svg.png", // Updated Budget logo URL (Wikimedia Commons PNG from SVG)
       location: "Terminal 3, Niveau -1, Zone Centrale",
       hours: "07:00 - 23:00, 7j/7",
       vehicles: ["Économique", "Compact", "Berline", "SUV"],
@@ -53,13 +54,13 @@ const AirportCarRental = () => {
       rating: 4.0
     }
   ];
-
+  
   // Données des loueurs avec navette
   const shuttleRenters = [
     {
       id: 4,
       name: "Sixt",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Sixt_logo.svg/2560px-Sixt_logo.svg.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Sixt_Logo_2023.svg/640px-Sixt_Logo_2023.svg.png", // Updated Sixt logo URL (Wikimedia Commons SVG)
       counterLocation: "Terminal 3, Hall des Arrivées, Desk 21",
       shuttleFrequency: "Toutes les 15 minutes",
       shuttleDuration: "7 minutes",
@@ -71,7 +72,7 @@ const AirportCarRental = () => {
     {
       id: 5,
       name: "Europcar",
-      logo: "https://logos-world.net/wp-content/uploads/2021/08/Europcar-Logo.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Europcar-Logo.svg/640px-Europcar-Logo.svg.png", // Kept the original as it's a commonly used web version
       counterLocation: "Terminal 3, Hall des Arrivées, Desk 18",
       shuttleFrequency: "Toutes les 20 minutes",
       shuttleDuration: "10 minutes",
@@ -83,7 +84,7 @@ const AirportCarRental = () => {
     {
       id: 6,
       name: "Thrifty",
-      logo: "https://logos-world.net/wp-content/uploads/2021/09/Thrifty-Logo.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Thrifty_Logo.jpg/640px-Thrifty_Logo.jpg", // Updated Thrifty logo URL (Wikimedia Commons PNG from SVG)
       counterLocation: "Terminal 3, Hall des Arrivées, Desk 15",
       shuttleFrequency: "Toutes les 30 minutes",
       shuttleDuration: "12 minutes",
@@ -225,29 +226,9 @@ const AirportCarRental = () => {
             </p>
             
             {/* Carte stylisée de l'aéroport */}
-            <div className="relative h-96 md:h-[500px] bg-blue-50 rounded-xl overflow-hidden shadow-md mb-6">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  {/* Dans une implémentation réelle, remplacer par une vraie carte interactive */}
-                  <Plane className="h-16 w-16 mx-auto mb-4 text-orange-400" />
-                  <p className="text-lg font-medium">Carte interactive de l'aéroport</p>
-                  <p className="text-sm">Une carte détaillée serait intégrée ici dans la version finale</p>
-                </div>
-              </div>
-              
-              {/* Légende */}
-              <div className="absolute bottom-4 right-4 bg-white p-3 rounded-lg shadow-md">
-                <p className="text-sm font-semibold mb-2">Légende</p>
-                <div className="flex items-center mb-1">
-                  <div className="w-4 h-4 bg-orange-500 rounded-full mr-2"></div>
-                  <span className="text-xs">Loueurs au Terminal 3</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-4 h-4 bg-rose-500 rounded-full mr-2"></div>
-                  <span className="text-xs">Loueurs avec navette</span>
-                </div>
-              </div>
-            </div>
+            <AirportMap  />
+
+            {/* Informations sur le terminal 3 */}  
             
             <p className="text-sm text-gray-600 italic text-center">
               Le Terminal 3 est le terminal principal pour les vols internationaux. Les bureaux des loueurs sont situés au niveau -1, accessible par ascenseur ou escalator depuis le hall des arrivées.
@@ -628,18 +609,21 @@ const AirportCarRental = () => {
               ))}
             </div>
             
-            <div className="mt-8 text-center">
-              <p className="text-gray-600 mb-4">
-                Vous avez d'autres questions? Notre équipe est là pour vous aider.
-              </p>
-              <a 
+            {/* Contact/Assistance */}
+            <div className="mt-8 bg-orange-50 p-5 rounded-lg border border-orange-200 text-center">
+              <HelpCircle className="h-8 w-8 text-orange-500 mx-auto mb-3" />
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Besoin d'aide?</h3>
+              <p className="text-gray-700 mb-4">
+                Si vous avez d'autres questions sur la <strong>location de voiture à Tel Aviv aéroport</strong> ou besoin d'assistance pour votre réservation, notre équipe est là pour vous aider.
+              </p>
+<a 
                 href="https://elynortours.com/contact/"
                 className="inline-flex items-center px-4 py-2 border border-orange-500 text-orange-500 bg-transparent hover:bg-orange-50 text-sm font-medium rounded-md transition-colors"
               >
                 <PhoneCall size={18} className="mr-2" />
                 Nous contacter
               </a>
-            </div>
+            </div>
           </div>
         </div>
       </section>
