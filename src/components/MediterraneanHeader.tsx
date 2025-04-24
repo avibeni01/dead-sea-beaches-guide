@@ -72,6 +72,15 @@ const MediterraneanHeader: React.FC<MediterraneanHeaderProps> = ({ onSwitchApp }
 
             {/* App Switcher Buttons */}
             <div className="flex items-center space-x-3 ml-6 border-l pl-4 border-gray-200">
+              <button
+                onClick={() => {
+                  window.location.hash = 'car-rental';
+                  window.dispatchEvent(new HashChangeEvent('hashchange'));
+                }}
+                className="px-3 py-1.5 rounded-md text-sm font-medium bg-white text-blue-500 border border-blue-500 hover:bg-blue-50 transition-colors"
+              >
+                Location Voiture
+              </button>
               <span className="px-3 py-1.5 rounded-md text-sm font-medium bg-rose-500 text-white">
                 Plages Méditerranée
               </span>
@@ -86,7 +95,16 @@ const MediterraneanHeader: React.FC<MediterraneanHeaderProps> = ({ onSwitchApp }
           
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
-            {/* App Switcher Button for Mobile */}
+            {/* App Switcher Buttons for Mobile */}
+            <button
+              onClick={() => {
+                window.location.hash = 'car-rental';
+                window.dispatchEvent(new HashChangeEvent('hashchange'));
+              }}
+              className="px-3 py-1.5 rounded-md text-xs font-medium bg-white text-blue-500 border border-blue-500 hover:bg-blue-50 transition-colors mr-2"
+            >
+              Location
+            </button>
             <button
               onClick={onSwitchApp}
               className="px-3 py-1.5 rounded-md text-xs font-medium bg-white text-orange-500 border border-orange-500 hover:bg-orange-50 transition-colors"

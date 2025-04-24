@@ -2,11 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import logoImg from '/LOGO.webp';
 
-interface HeaderProps {
-  onSwitchApp: () => void;
-}
+interface HeaderProps {}
 
-const Header: React.FC<HeaderProps> = ({ onSwitchApp }) => {
+const Header: React.FC<HeaderProps> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -70,25 +68,64 @@ const Header: React.FC<HeaderProps> = ({ onSwitchApp }) => {
             {/* App Switcher Buttons */}
             <div className="flex items-center space-x-3 ml-6 border-l pl-4 border-gray-200">
               <button
-                onClick={onSwitchApp}
+                onClick={() => {
+                  window.location.hash = 'car-rental';
+                  window.dispatchEvent(new HashChangeEvent('hashchange'));
+                }}
+                className="px-3 py-1.5 rounded-md text-sm font-medium bg-white text-blue-500 border border-blue-500 hover:bg-blue-50 transition-colors"
+              >
+                Location Voiture
+              </button>
+              <button
+                onClick={() => {
+                  window.location.hash = 'mediterranean-beaches';
+                  window.dispatchEvent(new HashChangeEvent('hashchange'));
+                }}
                 className="px-3 py-1.5 rounded-md text-sm font-medium bg-white text-rose-500 border border-rose-500 hover:bg-rose-50 transition-colors"
               >
                 Plages Méditerranée
               </button>
-              <span className="px-3 py-1.5 rounded-md text-sm font-medium bg-orange-500 text-white">
+              <button
+                onClick={() => {
+                  window.location.hash = 'dead-sea-beaches';
+                  window.dispatchEvent(new HashChangeEvent('hashchange'));
+                }}
+                className="px-3 py-1.5 rounded-md text-sm font-medium bg-white text-orange-500 border border-orange-500 hover:bg-orange-50 transition-colors"
+              >
                 Plages Mer Morte
-              </span>
+              </button>
             </div>
           </nav>
           
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
-            {/* App Switcher Button for Mobile */}
+            {/* App Switcher Buttons for Mobile */}
             <button
-              onClick={onSwitchApp}
-              className="px-3 py-1.5 rounded-md text-xs font-medium bg-white text-rose-500 border border-rose-500 hover:bg-rose-50 transition-colors"
+              onClick={() => {
+                window.location.hash = 'car-rental';
+                window.dispatchEvent(new HashChangeEvent('hashchange'));
+              }}
+              className="px-3 py-1.5 rounded-md text-xs font-medium bg-white text-blue-500 border border-blue-500 hover:bg-blue-50 transition-colors mr-2"
+            >
+              Location
+            </button>
+            <button
+              onClick={() => {
+                window.location.hash = 'mediterranean-beaches';
+                window.dispatchEvent(new HashChangeEvent('hashchange'));
+              }}
+              className="px-3 py-1.5 rounded-md text-xs font-medium bg-white text-rose-500 border border-rose-500 hover:bg-rose-50 transition-colors mr-2"
             >
               Méditerranée
+            </button>
+            <button
+              onClick={() => {
+                window.location.hash = 'dead-sea-beaches';
+                window.dispatchEvent(new HashChangeEvent('hashchange'));
+              }}
+              className="px-3 py-1.5 rounded-md text-xs font-medium bg-white text-orange-500 border border-orange-500 hover:bg-orange-50 transition-colors"
+            >
+              Mer Morte
             </button>
             
             <button
