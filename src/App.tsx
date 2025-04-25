@@ -9,23 +9,36 @@ import TransportationSection from './components/TransportationSection';
 import MediterraneanApp from './MediterraneanApp';
 import AirportCarRental from './components/AirportCarRental';
 import SEOHead from './components/SEOHead';
+import HotelPromotionsPage from './components/HotelPromotionsPage';
 
 function App() {
   const [showMediterranean, setShowMediterranean] = useState(true);
   const [showCarRental, setShowCarRental] = useState(false);
+  const [showHotelPromotions, setShowHotelPromotions] = useState(false);
 
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash;
+
+      // Faire défiler vers le haut
+       window.scrollTo({ top: 0, behavior: 'smooth' });
+
       if (hash.includes('car-rental')) {
         setShowCarRental(true);
         setShowMediterranean(false);
+        setShowHotelPromotions(false);
       } else if (hash.includes('dead-sea')) {
         setShowMediterranean(false);
         setShowCarRental(false);
+        setShowHotelPromotions(false);
+      } else if (hash.includes('hotel-promotions')) {
+        setShowMediterranean(false);
+        setShowCarRental(false);
+        setShowHotelPromotions(true);
       } else {
         setShowMediterranean(true);
         setShowCarRental(false);
+        setShowHotelPromotions(false);
       }
     };
 
@@ -120,6 +133,18 @@ function App() {
           />
           <Header />
           <AirportCarRental />
+        </>
+      ) : showHotelPromotions ? (
+        <>
+          <SEOHead
+            title="Promotions Hôtelières Exceptionnelles en Israël | Elynor Tours"
+            description="Découvrez nos promotions exclusives dans les plus beaux hôtels d'Israël. Meilleures offres à Tel Aviv, Jérusalem, Eilat et Mer Morte."
+            keywords="promotions hôtels Israël, offres spéciales hôtels, réduction hôtel Tel Aviv, hôtel Jérusalem pas cher, séjour Mer Morte"
+            canonicalUrl="https://elynortours.com/promotions-hotels"
+            ogImage="https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg"
+          />
+          <Header />
+          <HotelPromotionsPage />
         </>
       ) : showMediterranean ? (
         <>

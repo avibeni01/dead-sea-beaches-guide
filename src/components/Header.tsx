@@ -80,6 +80,7 @@ const Header: React.FC<HeaderProps> = () => {
                 onClick={() => {
                   window.location.hash = 'mediterranean-beaches';
                   window.dispatchEvent(new HashChangeEvent('hashchange'));
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
                 className="px-3 py-1.5 rounded-md text-sm font-medium bg-white text-rose-500 border border-rose-500 hover:bg-rose-50 transition-colors"
               >
@@ -89,10 +90,21 @@ const Header: React.FC<HeaderProps> = () => {
                 onClick={() => {
                   window.location.hash = 'dead-sea-beaches';
                   window.dispatchEvent(new HashChangeEvent('hashchange'));
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
                 className="px-3 py-1.5 rounded-md text-sm font-medium bg-white text-orange-500 border border-orange-500 hover:bg-orange-50 transition-colors"
               >
                 Plages Mer Morte
+              </button>
+              <button
+                onClick={() => {
+                  window.location.hash = 'hotel-promotions';
+                  window.dispatchEvent(new HashChangeEvent('hashchange'));
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="px-3 py-1.5 rounded-md text-sm font-medium bg-white text-fuchsia-500 border border-fuchsia-500 hover:bg-fuchsia-50 transition-colors"
+              >
+                Promotions Hôtels
               </button>
             </div>
           </nav>
@@ -104,6 +116,7 @@ const Header: React.FC<HeaderProps> = () => {
               onClick={() => {
                 window.location.hash = 'car-rental';
                 window.dispatchEvent(new HashChangeEvent('hashchange'));
+                window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
               className="px-3 py-1.5 rounded-md text-xs font-medium bg-white text-blue-500 border border-blue-500 hover:bg-blue-50 transition-colors mr-2"
             >
@@ -113,6 +126,7 @@ const Header: React.FC<HeaderProps> = () => {
               onClick={() => {
                 window.location.hash = 'mediterranean-beaches';
                 window.dispatchEvent(new HashChangeEvent('hashchange'));
+                window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
               className="px-3 py-1.5 rounded-md text-xs font-medium bg-white text-rose-500 border border-rose-500 hover:bg-rose-50 transition-colors mr-2"
             >
@@ -122,10 +136,21 @@ const Header: React.FC<HeaderProps> = () => {
               onClick={() => {
                 window.location.hash = 'dead-sea-beaches';
                 window.dispatchEvent(new HashChangeEvent('hashchange'));
+                window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="px-3 py-1.5 rounded-md text-xs font-medium bg-white text-orange-500 border border-orange-500 hover:bg-orange-50 transition-colors"
+              className="px-3 py-1.5 rounded-md text-xs font-medium bg-white text-orange-500 border border-orange-500 hover:bg-orange-50 transition-colors mr-2"
             >
               Mer Morte
+            </button>
+            <button
+              onClick={() => {
+                window.location.hash = 'hotel-promotions';
+                window.dispatchEvent(new HashChangeEvent('hashchange'));
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="px-3 py-1.5 rounded-md text-xs font-medium bg-white text-fuchsia-500 border border-fuchsia-500 hover:bg-fuchsia-50 transition-colors"
+            >
+              Hôtels
             </button>
             
             <button
